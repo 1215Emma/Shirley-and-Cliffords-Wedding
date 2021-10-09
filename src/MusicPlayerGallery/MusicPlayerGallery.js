@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import "./MusicPlayerGallery.css";
 import images from '../images/ImagesConfig'
 import GallerySlider from "../GallerySlider";
-import GalleryGrid from '../MusicPlayerGallery/GalleryGrid'
+import GalleryGrid from './GalleryGrid/GalleryGrid'
 import { wrap } from "popmotion";
 import Sidebar from "./Sidebar";
 import BackgroundImage from './BackgroundImage'
 import FocusedImage from './FocusedImage'
 const MusicPlayerGallery = () => {
-const [[page, direction], setPage] = useState([0, 0]);
-
+  const [[page, direction], setPage] = useState([0, 0]);
+  
 const imageIndex = wrap(0, images.length, page);
 const paginate = (newDirection) => {
   setPage([page + newDirection, newDirection]);

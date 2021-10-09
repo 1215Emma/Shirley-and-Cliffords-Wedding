@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { MdOutlineQueueMusic } from "react-icons/md";
 import { AiOutlineClose } from "react-icons/ai";
-import { motion, AnimatePresence } from "framer-motion";
-import { GridExpandButton } from "./GridExpandButton";
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import ImageView from "./ImageView";
+import DisplayGallery from './DisplayGallery'
 import "./GalleryGrid.css";
 const containerVariants = {
   hidden: {
@@ -24,11 +26,23 @@ const containerVariants = {
     },
   },
 };
-
-
-function GalleryGrid({ imageIndex, images }) {
+const Gallery = ({ match }) => {
+  let { id } = match.params;
+  const imageHasLoaded = true
+  return (
+    <>
+      <DisplayGallery selectedId={id} />
+      <AnimatePresence>
+        {id && imageHasLoaded && <ImageView id={id} key="image" />}
+      </AnimatePresence>
+    </>
+    
+  )
+}
+function GalleryGrid({ imageIndex, images, selectedImage }) {
   const [showGallery, setShowGallery] = useState(false);
-  const [expandedImage, setUnexpandedImage] = useState();
+
+
   return (
     <>
       <button
@@ -59,19 +73,12 @@ function GalleryGrid({ imageIndex, images }) {
               <AiOutlineClose className="x-icon" />
             </motion.button>
             <div className="image-grid-container">
-              <div className="image-grid">
-                {images.map((image) => (
-                  <GridExpandButton
-                    key={image}
-                    image={image}
-                    disabled={
-                      expandedImage !== image && expandedImage !== undefined
-                    }
-                    onExpand={() => setUnexpandedImage(image)}
-                    onCollapse={() => setUnexpandedImage()}
-                  />
-                ))}
-              </div>
+              {/* image-grid is card-list and is a ul*/}
+              <AnimateSharedLayout type="crossfade">
+                <Router>
+                  <Route path={['/:id', "/"]} component={Gallery} />
+                </Router>
+              </AnimateSharedLayout>
             </div>
           </motion.div>
         )}

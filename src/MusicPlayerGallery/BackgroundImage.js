@@ -28,12 +28,11 @@ const imageVariants = {
 };
 
 const BackgroundImage = ({ images, imageIndex, page, direction }) => {
-
   return (
     <AnimatePresence initial={false} custom={direction}>
       <motion.img
         key={page}
-        src={images[imageIndex]}
+        src={images[imageIndex].source}
         custom={direction}
         variants={imageVariants}
         initial="enter"
