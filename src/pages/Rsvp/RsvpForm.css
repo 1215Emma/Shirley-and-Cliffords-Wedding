@@ -1,0 +1,92 @@
+.rsvp-form-container {
+  height: 75vh;
+  width: 95vw;
+  overflow-y: auto;
+}
+
+Form {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+Form input {
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  height: 3em;
+  margin-bottom: 0.75em;
+  border: white solid 1px;
+}
+
+label {
+  margin-top: 1em;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 0.25em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+Form button {
+  color: white;
+  margin-top: 1em;
+  border-style: none;
+  height: 4em;
+  width: 10em;
+  margin-bottom: auto;
+  background: rgba(0, 0, 0, 0.4);
+  border: white solid 2px;
+  border-radius: 5%;
+}
+/* Name Container */
+.form-name-group-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-name-group-individual {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  width: 35vw;
+}
+
+Form input[name=first_name], input[name=last_name]{
+  margin-bottom: 0;
+}
+
+.form-name-group-inner label{
+  margin-top: 0;
+}
+
+
+/* Attending Status Container */
+.form-attending-status-group {
+  display: flex;
+}
+
+.attending-status-group label {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form-attending-status-group-individual input{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form-attending-status-group-individual {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 4em;
+  margin-top: 0.5em;
+}

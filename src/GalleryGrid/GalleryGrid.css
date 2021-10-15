@@ -1,0 +1,122 @@
+.gallery-queue {
+  display: flex;
+  font-size: 32px;
+  background-color: transparent;
+  border-style: none;
+  padding-bottom: 1em;
+  width: 100%;
+  justify-content: flex-end;
+  margin-right: 2em;
+  position: relative;
+}
+
+.gallery-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 3;
+  background-color: pink;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-queue-x {
+  font-size: 48px;
+  border-style: none;
+  background: transparent;
+  margin-left: auto;
+  margin-top: 0.3em;
+  margin-right: 0.5em;
+  margin-left: 80%;
+  color: white;
+}
+.image-grid-container {
+  display: flex;
+  align-self: center;
+  height: 100%;
+  width: 98%;
+  margin-top: 5em;
+}
+/* align-items: center THIS CENTERS VERTICALLY */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr min-content;
+  grid-gap: 5px;
+  overflow-y: auto;
+  align-items: center;
+}
+
+.image-container1 {
+  display: grid;
+}
+
+/* container for image/ */
+.image {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  vertical-align: bottom;
+
+}
+
+
+.expanded {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1;
+  background-color: pink;
+  
+}
+
+.compact {
+  object-fit: cover;
+}
+.expanded-navigation-bar {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgb(253, 158, 174);
+  width: 100%;
+  height: 5em;
+  border-bottom: 2px solid white;
+}
+.close-expanded-button {
+  border-style: none;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  padding-left: 1.5em;
+  margin-top: 1.5em;
+}
+.close-expanded-icon {
+  font-size: 40px;
+  color: white;
+}
+.expanded .title {
+  /* font-size: 5em; */
+  padding-top: 5em;
+  width: 100%;
+  object-fit: contain;
+  color: white;
+}
+
+.compact .title {
+  object-fit: cover;
+  max-height: 100%;
+  width: 100%;
+}

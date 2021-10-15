@@ -1,0 +1,109 @@
+.edit-button-container {
+  position: absolute;
+  height: 3em;
+  width: 3em;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 1em;
+  margin-right: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20%;
+}
+button {
+  background: transparent;
+  border-style: none;
+  color: white;
+}
+.edit-button {
+  height: 100%;
+  width: 100%;
+}
+
+.edit-button:nth-child(1) {
+  font-size: 28px;
+}
+.edit-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  width: 97.75vw;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: rgb(39, 36, 36);
+}
+.edit-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: rgb(39, 36, 36);
+  width: 100%;
+  height: 5em;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+}
+.nav-header {
+  color: white;
+  font-size: 32px;
+  justify-content: center;
+  width: 7.5em;
+}
+.close-edit-button, .cancel-edit-button {
+  top: 0;
+  left: 0;
+  margin-right: auto;
+  margin-top: 1.5em;
+  margin-left: 1.5em;
+}
+.close-edit-icon { 
+  font-size: 40px;
+}
+
+.edit {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+  color: white;
+}
+.edit-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 1.5em;
+}
+
+.edit-subsection {
+  padding-right: 1em;
+  font-size: 24px;
+  color: rgb(80, 80, 192);
+}
+.section-data-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3em;
+  width: 100%;
+}
+.edit h3{
+  margin: 0;
+  align-self: flex-start;
+  /* margin-left: 15%; */
+  margin-bottom: 0.25em;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.edit-subsection-popup-container {
+  background-color: rgb(39, 36, 36);
+  height: 100vh;
+  border-radius: 5%;
+}
+
+.edit-container .save-edit-button {
+  margin-right: 1.5em;
+  margin-top: 1.5em;
+}

@@ -28,6 +28,7 @@ const imageVariants = {
 };
 
 const BackgroundImage = ({ images, imageIndex, page, direction }) => {
+  console.log(images[imageIndex].source);
   return (
     <AnimatePresence initial={false} custom={direction}>
       <motion.img

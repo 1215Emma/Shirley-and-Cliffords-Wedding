@@ -6,19 +6,28 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "formik": "^2.2.9",
     "framer-motion": "^4.1.17",
+    "googleapis": "^88.2.0",
+    "nodemon": "^2.0.13",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "react-router-hash-link": "^2.4.3",
+    "react-scripts": "^4.0.3",
+    "react-scroll": "^1.8.4",
+    "web-vitals": "^1.1.2",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "nodemon": "nodemon DataHandling.js"
   },
   "eslintConfig": {
     "extends": [
@@ -37,5 +46,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1215Emma/Shirley-and-Cliffords-Wedding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1215Emma/Shirley-and-Cliffords-Wedding/issues"
+  },
+  "homepage": "/"
 }

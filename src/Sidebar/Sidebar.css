@@ -1,9 +1,22 @@
-.hamburger-horizontal {
-  font-size: 32px;
-  align-self: center;
-  background: transparent;
-  border-style: none;
+.sidebar-button-container {
+  position: sticky;
   z-index: 3;
+  top: 0;
+  right: 0;
+}
+.hamburger-horizontal {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 2.5em;
+  height: 1.1em;
+  margin-top: 1em;
+  margin-right: 1em;
+  right: 0;
+  border-radius: 20%/50%;
+  color: white;
+  /* background: transparent; */
+  border-style: none;
+  font-size: 32px;
 }
 
 .sidebar-container {
@@ -21,19 +34,26 @@
   margin-top: 1em;
   margin-right: 1em;
 }
+
 .sidebar-wrapper {
-  position: absolute;
+  position: fixed;
   background-color: pink;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   z-index: 2;
   overflow: hidden;
   top: 0;
+  left: 0;
 }
-.sidebar-container ul {
-  list-style: none;
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10%;
+  padding-left: 5%;
 }
 .sidebar-buttons {
+  text-decoration: none;
+  color: black;
   background: none;
   border-style: none;
   font-size: 36px;

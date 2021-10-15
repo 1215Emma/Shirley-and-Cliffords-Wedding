@@ -27,13 +27,12 @@
   width: 100%;
   justify-content: space-around;
   padding-top: 1em;
+  margin-right: 3em;
 }
 
 .music-player-container h1 {
   font-size: 32px;
   font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-  /* margin-top: 1em;
-  margin-bottom: 0.25em; */
 }
 .music-player-container h2 {
   font-size: 20px;
@@ -74,11 +73,13 @@
 .gallery-slider {
   padding:0;
   margin-left: 12%;
+  max-width: 75%;
+  
   background-color: white;
   height: 5px;
   background-size: 50% 100%;
   background-repeat: no-repeat;
-  border-radius: 10%;
+  border-radius: 5%;
   cursor: pointer;
   -webkit-appearance: none;
   opacity: 0.99;
@@ -109,18 +110,40 @@
   margin-top: 3em;
 }
 .previous-button {
-  font-size: 72px;
+  font-size: 65px;
   color: black;
   
 }
 .next-button {
-  font-size: 72px;
+  font-size: 65px;
   color: black;
 }
-.play-button {
-  font-size: 62px;
-  color: white;
+.playPause {
   background-color: rgba(0, 0, 0, 0.45);
+}
+.play-button {
+  font-size: 55px;
+  color: white;
   border-radius: 50%;
   padding-left: 7px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+}
+
+.shuffle-button {
+  font-size: 40px;
+  color: black;
+}
+.repeat-button {
+  font-size: 40px;
+  color: black;
+}
+.pause-button {
+  font-size: 55px;
+  color: white;
+  border-radius: 50%;
+  padding-left: 3.5px;
+  padding-right: 3.5px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
 }
