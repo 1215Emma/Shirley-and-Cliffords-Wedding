@@ -10,36 +10,45 @@ const Rsvp = ({ page, homeMetadata, pages, rsvpFormMetadata }) => {
     (imageArray) => imageArray.id === page
   );
   const pageIndex = pages.indexOf(page)
-  console.log(pageIndex)
 
-  return (
-    <>
-      <img
-        id={page}
-        src={PagesImages[imageIndex].source}
-        className={`img-${page}`}
-        alt="Shirley and Clifford kissing between streets"
-      />
-      {/* {EditPages(
+  if (homeMetadata !== null) {
+    return (
+      <>
+        {/* {EditPages(
         isLoggedIn,
         setIsEditable,
         isEditable,
         page
       )} */}
-      <div className="section-container">
-        <div className="primary-header rsvp-primary">
-          <h1>{homeMetadata[pageIndex].main_header}</h1>
-          <h2>{homeMetadata[pageIndex].sub_header}</h2>
-          <h2>{homeMetadata[pageIndex].form_header}</h2>
+        <div className="section-container">
+          <img
+            id={page}
+            src={PagesImages[imageIndex].source}
+            className={`img-${page}`}
+            alt="Shirley and Clifford kissing between streets"
+          />
+          <div className="section-no-image">
+            <div className="primary-header rsvp-primary">
+              <h1>{homeMetadata[pageIndex].main_header}</h1>
+              <h2>{homeMetadata[pageIndex].sub_header}</h2>
+              <h2>{homeMetadata[pageIndex].form_header}</h2>
+            </div>
+
+            <RsvpForm
+              page={page}
+              pageIndex={pageIndex}
+              homeMetadata={homeMetadata}
+              rsvpFormMetadata={rsvpFormMetadata}
+            />
+          </div>
         </div>
-        <RsvpForm page={page} pageIndex={pageIndex} homeMetadata={homeMetadata} rsvpFormMetadata={rsvpFormMetadata}/>
-      </div>
-      {/* {isLoggedIn ? 
+        {/* {isLoggedIn ? 
         showEditor() :
         <></>
       } */}
-    </>
-  );
+      </>
+    );
+  }
 }
 
 export default Rsvp

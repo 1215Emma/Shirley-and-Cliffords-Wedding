@@ -7,16 +7,14 @@ import Travel from "./Travel/Travel";
 import Faq from "./Faq/Faq";
 import PagesImages from "./images/PagesImagesConfig";
 import { getSectionData } from "../Api/Api";
+import { useDynamicData } from "../Api/DynamicData";
 const Home = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [isEditable, setIsEditable] = useState(false);
-  const [data, setData] = useState(null);
 
-  useEffect(() => {
-    getSectionData(setData);
-  }, [setData]);
+  const data = useDynamicData();
+
   if (data !== null) {
-    console.log(data, "DATA");
     return (
       <div className="home-wrapper">
         <div className="home-container main">

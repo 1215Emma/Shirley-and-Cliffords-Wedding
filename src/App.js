@@ -3,11 +3,13 @@ import MusicPlayerGallery from "./MusicPlayerGallery/MusicPlayerGallery";
 import Rsvp from "./pages/Rsvp/Rsvp";
 import Main from "./pages/Main/Main";
 import Home from "./pages/Home";
-import Login from "./Authentication/Login";
+import AdminLogin from "./Authentication/AdminLogin";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AuthContextProvider from "./context/AuthContext";
 
 function App() {
   return (
+    <AuthContextProvider>
     <Router>
       <div className="main-container">
         <Switch>
@@ -15,7 +17,7 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/Admin">
-            <Login />
+            <AdminLogin />
           </Route>
           <Route exact path="/Main">
             <Main />
@@ -23,12 +25,13 @@ function App() {
           <Route exact path="/galleryplayer">
             <MusicPlayerGallery />
           </Route>
-          <Route exact path="/Rsvp">
+          <Route exact path="/rsvp">
             <Rsvp />
           </Route>
         </Switch>
       </div>
     </Router>
+    </AuthContextProvider>
   );
 }
 

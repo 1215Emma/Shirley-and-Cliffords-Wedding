@@ -9,7 +9,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20%;
 }
-button {
+.close-edit-button, .save-edit-button {
   background: transparent;
   border-style: none;
   color: white;

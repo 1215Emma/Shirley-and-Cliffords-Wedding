@@ -1,7 +1,8 @@
 .rsvp-form-container {
-  height: 75vh;
-  width: 95vw;
-  overflow-y: auto;
+  position: relative;
+  left: 0;
+  width: 95%;
+  height: auto;
 }
 
 Form {
@@ -22,7 +23,7 @@ Form input {
 }
 
 label {
-  margin-top: 1em;
+  margin-top: 0.5em;
   color: white;
   font-size: 18px;
   margin-bottom: 0.25em;
@@ -40,7 +41,7 @@ Form button {
   border-style: none;
   height: 4em;
   width: 10em;
-  margin-bottom: auto;
+  margin-bottom: 2em;
   background: rgba(0, 0, 0, 0.4);
   border: white solid 2px;
   border-radius: 5%;

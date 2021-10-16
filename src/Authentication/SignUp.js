@@ -1,13 +1,16 @@
-import React from "react";
-import "./Login.css";
+import React, { useState } from "react";
+import "./SignUp.css";
 import app from "../Utilities/init-firebase";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import { useAuth } from "../context/AuthContext";
 
-const Login = () => {
-  const { currentUser } = useAuth();
+const SignUp = () => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
 
   const initialValues = {
     email: "",
@@ -23,7 +26,7 @@ const Login = () => {
     helperText: meta.touched && meta.error,
   });
   return (
-    <div className="login-wrapper">
+    <div className="sign-up-wrapper">
       <Formik
         initialValues={initialValues}
         validationSchema={sch}
@@ -52,27 +55,23 @@ const Login = () => {
               onChange={handleChange}
               onBlur={handleBlur}
               value={values.email}
-            />
-            <label>Email</label>
+              />
+              <label>Email</label>
             {/* <ErrorMessage name="email" component="div" /> */}
-
             <Field
               type="password"
               name="password"
               onChange={handleChange}
               onBlur={handleBlur}
               value={values.password}
-            />
-            <label>Password</label>
+              />
+              <label>Password</label>
             {/* <ErrorMessage name="password" component="div" /> */}
-
-            <button
-              className="form-login-btn"
-              type="submit"
-              disabled={isSubmitting}
-            >
-              Log in
+            
+            <button className="form-sign-up-btn" type="submit" disabled={isSubmitting}>
+              Sign up
             </button>
+          
           </Form>
         )}
       </Formik>
@@ -80,4 +79,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;

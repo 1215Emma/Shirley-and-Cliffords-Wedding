@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Sidebar.css";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
-import {  NavHashLink } from "react-router-hash-link";
+import { NavHashLink } from "react-router-hash-link";
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
@@ -91,7 +91,7 @@ const Sidebar = () => {
                 <NavHashLink
                   smooth
                   className="sidebar-buttons"
-                  to={"/home#main"}
+                  to={"/"}
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
@@ -101,7 +101,7 @@ const Sidebar = () => {
                 <NavHashLink
                   smooth
                   className="sidebar-buttons"
-                  to={"/home#rsvp"}
+                  to={"/#rsvp"}
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
@@ -111,7 +111,7 @@ const Sidebar = () => {
                 <NavHashLink
                   smooth
                   className="sidebar-buttons"
-                  to={"/home#registry"}
+                  to={"/registry"}
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}

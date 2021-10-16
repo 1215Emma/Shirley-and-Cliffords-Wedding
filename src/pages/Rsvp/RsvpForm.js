@@ -145,7 +145,7 @@ const RsvpForm = ({ page, pageIndex, homeMetadata, rsvpFormMetadata }) => {
           </Form>
         )}
       </Formik>
-    </div>
+   </div>
   );
 };
 

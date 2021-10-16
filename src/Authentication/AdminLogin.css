@@ -1,0 +1,182 @@
+.portal-wrapper {
+  background-image: url("../pages/images/beach-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  opacity: 0.75;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+  overflow-y: auto;
+  justify-content: flex-end;
+}
+.login-header {
+  position: relative;
+  margin-bottom: 5%;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.giraffe-container {
+  position: relative;
+  margin-bottom: 3%;
+  height: 30%;
+}
+.cutelilgiraffe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.credential-greeting {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: auto;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  width: 90%;
+  padding: 0.3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tab-container {
+  position: relative;
+  opacity: 0.9;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 90%;
+}
+
+.login-btn {
+  border-radius: 15px;
+  background-color: rgb(255, 123, 0);
+  border: black solid 1px;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  height: 6vh;
+}
+.sign-up-btn {
+  border-radius: 15px;
+  background: transparent;
+  border: rgb(255, 123, 0) solid 4px;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  width: 100%;
+  height: 6vh;
+}
+.button-border {
+  border: black solid 1px;
+  height: 6vh;
+  width: 100%;
+  border-radius: 15px;
+}
+.credentials-container {
+  margin-top: auto;
+}
+label {
+  margin-right: auto;
+  margin-top: 0;
+  font-size: 20px;
+  margin-bottom: 1em;
+  color: black;
+  font-weight: bold;
+}
+Form {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+Form input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: none;
+  border-bottom: black solid 2px;
+  width: 100%;
+}
+
+.form-login-btn,
+.form-sign-up-btn {
+  border-radius: 15px;
+  background-color: rgb(255, 123, 0);
+  border: black solid 1px;
+  font-size: 24px;
+  color: white;
+  width: 100%;
+  height: 6vh;
+  font-weight: bold;
+  margin-bottom: 4%;
+  margin-top: 0;
+  margin-top: 5%;
+}
+
+.border-style-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
+  /* margin-bottom: 11.75%; */
+}
+.border-style {
+  height: 2px;
+  width: 37.5%;
+  opacity: 0.75;
+  background-color: black;
+  margin-top: 2.2em;
+  margin-bottom: 1em;
+}
+
+.or-text {
+  color: black;
+  font-size: 24px;
+  position: relative;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  width: 1em;
+  text-align: center;
+}
+
+.below-sign-up-btn {
+  border-radius: 15px;
+  background: transparent;
+  border: rgb(255, 123, 0) solid 4px;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  width: 100%;
+  height: 6vh;
+}
+.below-login-btn {
+  border-radius: 15px;
+  background: transparent;
+  border: rgb(255, 123, 0) solid 4px;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  width: 100%;
+  height: 6vh;
+}
+.below-button-border {
+  width: 100%;
+  height: 6vh;
+  border: black solid 1px;
+  border-radius: 15px;
+}
