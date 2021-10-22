@@ -1,12 +1,18 @@
 import React from 'react'
 import { Formik,Form, Field, ErrorMessage } from "formik";
 import { sectionUpdater } from '../Api/Api'
-const EditContent = ({ endpoint, setSectionData, sectionData}) => {
+const EditContent = ({ data }) => {
+  
+  // const setInitialValues = () => {
+  //   data.homeMetadata.map(pages => {
+
+  //   })
+  // }
   return (
     <Formik
       initialValues={{
-        main_header: sectionData.main_header,
-        sub_header: sectionData.sub_header,
+        main_header: data.main_header,
+        sub_header: data.sub_header,
       }}
       validate={(values) => {
         const errors = {};
@@ -17,9 +23,8 @@ const EditContent = ({ endpoint, setSectionData, sectionData}) => {
       }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
-          console.log(JSON.stringify(values));
-          const value = JSON.stringify(values, null, 2);
-          sectionUpdater(value, endpoint, setSectionData);
+          const value = JSON.stringify(values);
+          sectionUpdater(value);
           setSubmitting(false);
         }, 400);
       }}

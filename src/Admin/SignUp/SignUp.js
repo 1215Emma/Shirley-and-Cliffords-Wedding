@@ -1,16 +1,10 @@
 import React, { useState } from "react";
 import "./SignUp.css";
-import app from "../Utilities/init-firebase";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
-import { useAuth } from "../context/AuthContext";
+import { register } from '../credentialFunc'
 
-const SignUp = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
+  const SignUp = () => {
 
   const initialValues = {
     email: "",
@@ -32,9 +26,7 @@ const SignUp = () => {
         validationSchema={sch}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
-            console.log(JSON.stringify(values));
-            const value = JSON.stringify(values);
-            // sectionUpdater(value);
+            register(values)
             setSubmitting(false);
           }, 400);
         }}

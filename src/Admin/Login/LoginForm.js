@@ -1,14 +1,9 @@
 import React from "react";
-import "./Login.css";
-import app from "../Utilities/init-firebase";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
-import { useAuth } from "../context/AuthContext";
+import { login } from "../credentialFunc";
 
-const Login = () => {
-  const { currentUser } = useAuth();
-
+const loginForm = () => {
   const initialValues = {
     email: "",
     password: "",
@@ -29,10 +24,7 @@ const Login = () => {
         validationSchema={sch}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
-            console.log(JSON.stringify(values));
-            const value = JSON.stringify(values);
-            // sectionUpdater(value);
-            setSubmitting(false);
+            login(values);
           }, 400);
         }}
       >
@@ -45,7 +37,7 @@ const Login = () => {
           handleSubmit,
           isSubmitting,
         }) => (
-          <Form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit} className="auth-form">
             <Field
               type="email"
               name="email"
@@ -53,9 +45,8 @@ const Login = () => {
               onBlur={handleBlur}
               value={values.email}
             />
-            <label>Email</label>
+            <label className="admin-label">Email</label>
             {/* <ErrorMessage name="email" component="div" /> */}
-
             <Field
               type="password"
               name="password"
@@ -63,9 +54,8 @@ const Login = () => {
               onBlur={handleBlur}
               value={values.password}
             />
-            <label>Password</label>
+            <label className="admin-label">Password</label>
             {/* <ErrorMessage name="password" component="div" /> */}
-
             <button
               className="form-login-btn"
               type="submit"
@@ -80,4 +70,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default loginForm

@@ -1,7 +1,9 @@
 .portal-wrapper {
   background-image: url("../pages/images/beach-background.png");
+  /* background-image: url("https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-15.jpg"); */
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
   opacity: 0.75;
   display: flex;
@@ -13,7 +15,7 @@
   margin-right: auto;
   z-index: 0;
   overflow-y: auto;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 .login-header {
   position: relative;
@@ -88,7 +90,7 @@
 .credentials-container {
   margin-top: auto;
 }
-label {
+.admin-label {
   margin-right: auto;
   margin-top: 0;
   font-size: 20px;
@@ -96,12 +98,12 @@ label {
   color: black;
   font-weight: bold;
 }
-Form {
+.auth-form {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
-Form input {
+.auth-form input {
   border-top: none;
   border-left: none;
   border-right: none;
@@ -179,4 +181,30 @@ Form input {
   height: 6vh;
   border: black solid 1px;
   border-radius: 15px;
+}
+
+
+.admin-panel-container {
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+}
+.logged-in-credentials-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+  padding-bottom: 2em;
+  align-items: center;
+  border-bottom: rgba(0, 0, 0, 0.5) solid 1px;
+}
+.logged-in-credentials-container h4 {
+  color: white;
+}
+
+.edit-sections-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  height: 100vh;
+  width: 100%;
 }

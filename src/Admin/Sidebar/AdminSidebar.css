@@ -1,0 +1,91 @@
+.admin-sidebar-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  background-color: rgba(0, 0, 0, 0.75);
+  min-width: 30vw;
+  height: 100vh;
+  border: white solid 3px;
+}
+.inner-sidebar-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 15%;
+}
+.edit-btn {
+  background: none;
+  border-style: none;
+  margin-top: 5em;
+  width: 100%;
+}
+.edit-btn-icon {
+  font-size: 32px;
+  color: white;
+}
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-top: 1em;
+}
+.sidebar-section-btn {
+  display: flex;
+  border-style: none;
+  background: none;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.8);
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-left: 1.25em;
+}
+.sidebar-section-btn h2 {
+  margin: 0;
+  
+}
+.settings-container {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-button {
+  background: none;
+  border-style: none;
+  color: white;
+  font-size: 36px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: 0.25em;
+  width: 100%;
+  bottom: 0;
+}
+
+.settings-container-clicked {
+  margin-top: auto;
+}
+.sign-out-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  border-style: none;
+  background-color: rgba(255, 165, 0, 0);
+  color: white;
+  margin-right: 1em;
+  border-radius: 10px;
+  right: 0;
+}
+.sign-out-btn-icon {
+  font-size: 36px;
+  margin-bottom: 0;
+}
+.sign-out-btn h2 {
+  font-size: 12px;
+  width: 100%;
+  margin-top: 0;
+  margin-left: 1em;
+}

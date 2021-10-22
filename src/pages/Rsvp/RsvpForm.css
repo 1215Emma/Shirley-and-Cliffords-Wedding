@@ -5,7 +5,7 @@
   height: auto;
 }
 
-Form {
+.rsvp-form {
   display: flex;
   flex-direction: column;
   justify-content:flex-start;
@@ -14,7 +14,7 @@ Form {
   margin-right: 2em;
 }
 
-Form input {
+.rsvp-form input {
   background: rgba(0, 0, 0, 0.4);
   border: none;
   height: 3em;
@@ -22,7 +22,7 @@ Form input {
   border: white solid 1px;
 }
 
-label {
+.rsvp-form label {
   margin-top: 0.5em;
   color: white;
   font-size: 18px;
@@ -35,7 +35,7 @@ label {
   width: 100%;
 }
 
-Form button {
+.rsvp-form button {
   color: white;
   margin-top: 1em;
   border-style: none;
@@ -60,7 +60,7 @@ Form button {
   width: 35vw;
 }
 
-Form input[name=first_name], input[name=last_name]{
+.rsvp-form input[name=first_name], input[name=last_name]{
   margin-bottom: 0;
 }
 

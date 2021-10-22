@@ -1,13 +1,14 @@
-import react, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { getSectionData } from "./Api"
 
-export const useDynamicData = () => {
-  const [data, setData] = useState(null)
+export const useDynamicData = (setIsDataLoaded) => {
+  const [data, setData] = useState({})
   useEffect(() => {
-    getSectionData(setData)
-    
-
-}, [])
+    const getData = async() => {
+      getSectionData(setData, setIsDataLoaded)
+    }
+    getData()
+}, [setData, setIsDataLoaded])
 
   return (
     data

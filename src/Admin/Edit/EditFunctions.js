@@ -21,10 +21,3 @@ export const ShowEditor = (isLoggedIn, setIsEditable, isEditable) => {
     );
   
 };
-
-// export const openEditor = () => {
-  
-//   return (
-   
-//   )
-// }

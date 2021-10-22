@@ -1,0 +1,60 @@
+{
+  "main": {
+    "header": {
+      "header_primary": "Shirley & Clifford",
+      "header_secondary": "Day, Month, Year",
+      "header_tertiary": "location"
+    },
+    "body": {
+      "body_primary": "Hello World",
+      "body_secondary": "",
+    }
+  },
+  "rsvp": {
+    "header": {
+      "header_primary": "RSVP",
+      "header_secondary": "Thanks for joining us!",
+      "header_tertiary": ""
+    },
+    "body": {
+      "form_header": "Please fill out the form below",
+      "form_name": "Name",
+      "form_first_name": "First Name",
+      "form_last_name": "Last Name",
+      "form_email": "Email",
+      "form_attending_status": "Will you be attending?",
+      "form_attending_status_yes": "Yes",
+      "form_attending_status_no": "No",
+      "form_extra1": "Name of guests in your party",
+      "form_extra2": "Any food restrictions?",
+      "form_extra3": "Questions or comments"
+    }
+  },
+  "travel": {
+    "header": {
+      "header_primary": "Travel",
+      "header_secondary": "secondary"
+    },
+    "body": {
+      "body_primary": "travel blob"
+    }
+  },
+  "registry": {
+    "header": {
+      "header_primary": "Registry",
+      "header_secondary": "secondary placeholder"
+    },
+    "body": {
+      "body_primary": "blob"
+    }
+  },
+  "faq": {
+    "header": {
+      "header_primary": "FAQ",
+      "header_secondary": "secondary placeholder"
+    },
+    "body": {
+      "body_primary": "blob"
+    }
+  }
+}

@@ -6,6 +6,14 @@ export const loginAuth = (value) => {
 
 }
 
+export const getPages = async () => {
+  await fetch(`http://localhost:3001/api/pages`)
+    .then((response) => response.json())
+    .then((body) => {
+      console.log(body);
+    });
+};
+
 export const sectionUpdater = async (value, endpoint, setSectionData) => {
   const options = {
     method: "PUT",
@@ -27,15 +35,23 @@ export const sectionUpdater = async (value, endpoint, setSectionData) => {
     });
 };
 
-export const getSectionData = async (setData) => {
-  await fetch(`http://localhost:3001/api/home-metadata`)
+export const getSectionData = async (setData, setIsDataLoaded) => {
+  fetch(`http://localhost:3001/api/home-metadata`)
+    .then((response) => response.json())
+    .then((body) => {
+      console.log(body, "here??");
+      setData(body);
+      setIsDataLoaded(true)
+    });
+};
+export const getIndividualSectionData = async (section) => {
+  await fetch(`http://localhost:3001/api/home-metadata/:${section}`,
+  section)
     .then((response) => response.json())
     .then((body) => {
       console.log(body);
-      setData(body);
     });
-};
-
+}
 export const rsvpFormSubmit = async( value ) => {
   const options = {
     method: "POST",
