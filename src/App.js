@@ -21,7 +21,7 @@ function App() {
         <Route exact path="/main">
           <Main />
         </Route>
-        <Route exact path="/gallery-player">
+        <Route exact path="/galleryplayer">
           <MusicPlayerGallery />
         </Route>
         <Route exact path="/rsvp">

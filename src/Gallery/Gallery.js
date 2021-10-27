@@ -3,7 +3,7 @@ import './Gallery.css'
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import imageUrls from '../images/imageUrls.json'
 import { BsArrowLeft } from 'react-icons/bs'
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 
 
 
@@ -40,15 +40,15 @@ const Gallery = () => {
       exit={{ opacity: 1, y: "100%", transition: { duration: 0.5 } }}
     >
       <div className="expanded-navigation-bar">
-        <NavHashLink
+        <HashLink
           smooth
           activeStyle={{ fontWeight: "bold" }}
           className="close-expanded-button"
-          to={"/galleryplayer"}
+          to="/galleryplayer"
         >
         <BsArrowLeft className="close-expanded-icon" />
 
-        </NavHashLink>
+        </HashLink>
       </div>
       <AnimateSharedLayout type="crossfade">
         <div className="primary-container">

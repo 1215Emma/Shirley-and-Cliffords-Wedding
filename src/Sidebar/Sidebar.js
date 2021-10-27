@@ -172,7 +172,7 @@ const Sidebar = () => {
                   smooth
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to="/gallery-player"
+                  to="/galleryplayer"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
