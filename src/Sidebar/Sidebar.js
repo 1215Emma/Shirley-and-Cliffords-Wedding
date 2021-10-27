@@ -114,10 +114,9 @@ const Sidebar = () => {
               ></button>
               <div className="sidebar-links">
                 <HashLink
-                  smooth
+                  smooth to="/#main"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to="/#main"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
@@ -126,9 +125,9 @@ const Sidebar = () => {
                 </HashLink>
                 <HashLink
                   smooth
+                  to="/#travel"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to="/#travel"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
@@ -137,9 +136,9 @@ const Sidebar = () => {
                 </HashLink>
                 <HashLink
                   smooth
+                  to="/#rsvp"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to="/#rsvp"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
@@ -148,9 +147,9 @@ const Sidebar = () => {
                 </HashLink>
                 <HashLink
                   smooth
+                  to="/#faq"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to="/#faq"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
@@ -159,9 +158,9 @@ const Sidebar = () => {
                 </HashLink>
                 <HashLink
                   smooth
+                  to="/#registry"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to="/#registry"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
@@ -170,9 +169,9 @@ const Sidebar = () => {
                 </HashLink>
                 <NavLink
                   smooth
+                  to="/gallery-player"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to="/galleryplayer"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
