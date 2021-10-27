@@ -11,28 +11,26 @@ function App() {
   
   return (
     <Router>
-
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/Admin">
-            <Admin />
-          </Route>
-          <Route exact path="/main">
-            <Main />
-          </Route>
-          <Route exact path="/galleryplayer">
-            <MusicPlayerGallery />
-          </Route>
-          <Route exact path="/rsvp">
-            <Rsvp />
-          </Route>
-          <Route exact path="/gallery">
-            <Gallery />
-          </Route>
-        </Switch>
- 
+      <Switch>
+        <Route exact path="https://soinlovewithcho.com">
+          <Home />
+        </Route>
+        <Route exact path="https://soinlovewithcho.com/Admin">
+          <Admin />
+        </Route>
+        <Route exact path="https://soinlovewithcho.com/main">
+          <Main />
+        </Route>
+        <Route exact path="https://soinlovewithcho.com/galleryplayer">
+          <MusicPlayerGallery />
+        </Route>
+        <Route exact path="https://soinlovewithcho.com/rsvp">
+          <Rsvp />
+        </Route>
+        <Route exact path="https://soinlovewithcho.com/gallery">
+          <Gallery />
+        </Route>
+      </Switch>
     </Router>
   );
 }
