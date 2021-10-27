@@ -12,22 +12,22 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="https://soinlovewithcho.com">
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="https://soinlovewithcho.com/Admin">
+        <Route exact path="/admin">
           <Admin />
         </Route>
-        <Route exact path="https://soinlovewithcho.com/main">
+        <Route exact path="/main">
           <Main />
         </Route>
-        <Route exact path="https://soinlovewithcho.com/galleryplayer">
+        <Route exact path="/gallery-player">
           <MusicPlayerGallery />
         </Route>
-        <Route exact path="https://soinlovewithcho.com/rsvp">
+        <Route exact path="/rsvp">
           <Rsvp />
         </Route>
-        <Route exact path="https://soinlovewithcho.com/gallery">
+        <Route exact path="/gallery">
           <Gallery />
         </Route>
       </Switch>

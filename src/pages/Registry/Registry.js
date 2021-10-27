@@ -18,8 +18,8 @@ const Registry = ({ page }) => {
           <img
             id={page}
             className={`img-${page}`}
-            src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-180.jpg"
-            alt="Shirley and Clifford holding hands looking at eachother"
+            src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-164.jpg"
+            alt="Shirley and Clifford sharing a kiss"
           />
           <div className="section-no-image">
             <div className="primary-header registry-primary">

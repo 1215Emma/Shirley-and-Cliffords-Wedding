@@ -19,23 +19,6 @@
   border-style: none;
   font-size: 40px;
 }
-
-.sidebar-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin: 1;
-  padding: 1;
-}
-.hamburger-vertical {
-  font-size: 32px;
-  background: transparent;
-  border-style: none;
-  align-self: flex-end;
-  margin-top: 1em;
-  margin-right: 1em;
-}
-
 .sidebar-wrapper {
   position: fixed;
   background-color: pink;
@@ -46,6 +29,33 @@
   top: 0;
   left: 0;
 }
+
+@media screen and (min-width: 550px) {
+  .sidebar-wrapper {
+  position: fixed;
+  background-color: pink;
+  height: 100vh;
+  width: 20vw;
+  z-index: 2;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  }
+}
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.hamburger-vertical {
+  font-size: 32px;
+  background: transparent;
+  border-style: none;
+  align-self: flex-end;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
 .sidebar-links {
   display: flex;
   flex-direction: column;

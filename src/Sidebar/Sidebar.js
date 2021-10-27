@@ -2,32 +2,57 @@ import React, { useState } from "react";
 import "./Sidebar.css";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
+import { NavLink } from "react-router-dom";
+import { useMediaQuery } from "../Utilities/useMediaQueries/useMediaQuery";
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
-
-  const containerVariants = {
-    hidden: {
-      opacity: 1,
-      x: "100vw",
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        type: "sween",
-        duration: 0.3,
-      },
-    },
-    exit: {
-      opacity: 1,
-      x: "100vw",
-      transition: {
-        type: "sween",
-        duration: 0.3,
-      },
-    },
-  };
+  const isSmall = useMediaQuery("(min-width: 500px)");
+  const containerVariants = !isSmall
+    ? {
+        hidden: {
+          opacity: 1,
+          x: "100vw",
+        },
+        visible: {
+          opacity: 1,
+          x: 0,
+          transition: {
+            type: "sween",
+            duration: 0.3,
+          },
+        },
+        exit: {
+          opacity: 1,
+          x: "100vw",
+          transition: {
+            type: "sween",
+            duration: 0.3,
+          },
+        },
+      }
+    : {
+        hidden: {
+          opacity: 1,
+          x: "100vw",
+        },
+        visible: {
+          opacity: 1,
+          x: "80vw",
+          transition: {
+            type: "sween",
+            duration: 0.3,
+          },
+        },
+        exit: {
+          opacity: 1,
+          x: "100vw",
+          transition: {
+            type: "sween",
+            duration: 0.3,
+          },
+        },
+      };
 
   const svgVariants = {
     horizontal: {
@@ -88,93 +113,93 @@ const Sidebar = () => {
                 }}
               ></button>
               <div className="sidebar-links">
-                <NavHashLink
+                <HashLink
                   smooth
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to={"/#main"}
+                  to="/#main"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
                 >
                   Home
-                </NavHashLink>
-                <NavHashLink
+                </HashLink>
+                <HashLink
                   smooth
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to={"/#travel"}
+                  to="/#travel"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
                 >
                   Travel
-                </NavHashLink>
-                <NavHashLink
+                </HashLink>
+                <HashLink
                   smooth
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to={"/#rsvp"}
+                  to="/#rsvp"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
                 >
                   RSVP
-                </NavHashLink>
-                <NavHashLink
+                </HashLink>
+                <HashLink
                   smooth
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to={"/#faq"}
+                  to="/#faq"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
                 >
                   Faq
-                </NavHashLink>
-                <NavHashLink
+                </HashLink>
+                <HashLink
                   smooth
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to={"/#registry"}
+                  to="/#registry"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
                 >
                   Registry
-                </NavHashLink>
-                <NavHashLink
+                </HashLink>
+                <NavLink
                   smooth
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to={"/galleryplayer"}
+                  to="/gallery-player"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
                 >
                   Gallery Player
-                </NavHashLink>
-                <NavHashLink
+                </NavLink>
+                <NavLink
                   smooth
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to={"/gallery"}
+                  to="/gallery"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
                 >
                   Gallery
-                </NavHashLink>
-                <NavHashLink
+                </NavLink>
+                <NavLink
                   smooth
                   className="sidebar-buttons"
-                  to={"/admin"}
+                  to="/admin"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
                 >
                   Admin
-                </NavHashLink>
+                </NavLink>
               </div>
             </div>
           </motion.div>
