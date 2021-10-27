@@ -41,13 +41,11 @@ const Gallery = () => {
     >
       <div className="expanded-navigation-bar">
         <HashLink
-          smooth
+          smooth to="/gallery-player"
           activeStyle={{ fontWeight: "bold" }}
           className="close-expanded-button"
-          to="/galleryplayer"
         >
-        <BsArrowLeft className="close-expanded-icon" />
-
+          <BsArrowLeft className="close-expanded-icon" />
         </HashLink>
       </div>
       <AnimateSharedLayout type="crossfade">
