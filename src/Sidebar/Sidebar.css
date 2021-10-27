@@ -8,15 +8,16 @@
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   width: 2.5em;
-  height: 1.1em;
-  margin-top: 1em;
-  margin-right: 1em;
+  height: 1em;
+  /* margin-top: 0.3em;
+  margin-right: 0.4em; */
+  border-bottom-left-radius: 15px;
   right: 0;
-  border-radius: 20%/50%;
+  /* border-radius: 20%/50%; */
   color: white;
   /* background: transparent; */
   border-style: none;
-  font-size: 32px;
+  font-size: 40px;
 }
 
 .sidebar-container {

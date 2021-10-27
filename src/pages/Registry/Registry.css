@@ -2,7 +2,7 @@
 .all-store-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 95%;
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
@@ -10,19 +10,18 @@
 }
 .button-container {
   background: transparent;
-  margin-top: 5%;
   position: relative;
   width: 50%;
-  height: 20%;
+  height: auto;
 }
 .registry-button {
   border-style: none;
   border: white solid 1px;
-  border-radius: 5%;
+  border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   width: 100%;
-  height: 100%;
+  height: 4em;
 }
 .registry-button h2 {
   margin: 0;
@@ -34,7 +33,7 @@
   border: white solid 2px;
   align-items: center;
   justify-content: space-between;
-  height: 50%;
+  height: auto;
   margin-bottom: 4em;
   border-bottom: none;
   border-right: none;
@@ -44,6 +43,7 @@
 .store-container h3 {
   color: white;
   margin-left: 0.5em;
+  margin-bottom: 20%;
 }
 
 .style-container1 {
@@ -52,16 +52,18 @@
   left: 0;
   bottom: 0;
   height: 89%;
-  width: 25%;
+  width: 24.5%;
   border-bottom: white solid 2px;
-  border-bottom-left-radius: 10%;
+  border-top-left-radius: 10%;
+  border-left: white solid 2px;
 }
 .style-container2 {
   position: absolute;
   top: 0;
   right: 0;
   height: 89%;
-  width: 25%;
+  width: 24.5%;
   border-bottom: white solid 2px;
-  border-bottom-right-radius: 10%;
+  border-top-right-radius: 10%;
+  border-right: white solid 2px;
 }

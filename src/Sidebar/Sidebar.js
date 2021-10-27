@@ -90,8 +90,9 @@ const Sidebar = () => {
               <div className="sidebar-links">
                 <NavHashLink
                   smooth
+                  activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to={"/"}
+                  to={"/#main"}
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
@@ -100,6 +101,18 @@ const Sidebar = () => {
                 </NavHashLink>
                 <NavHashLink
                   smooth
+                  activeStyle={{ fontWeight: "bold" }}
+                  className="sidebar-buttons"
+                  to={"/#travel"}
+                  onClick={() => {
+                    setShowSidebar(!showSidebar);
+                  }}
+                >
+                  Travel
+                </NavHashLink>
+                <NavHashLink
+                  smooth
+                  activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
                   to={"/#rsvp"}
                   onClick={() => {
@@ -110,8 +123,20 @@ const Sidebar = () => {
                 </NavHashLink>
                 <NavHashLink
                   smooth
+                  activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
-                  to={"/registry"}
+                  to={"/#faq"}
+                  onClick={() => {
+                    setShowSidebar(!showSidebar);
+                  }}
+                >
+                  Faq
+                </NavHashLink>
+                <NavHashLink
+                  smooth
+                  activeStyle={{ fontWeight: "bold" }}
+                  className="sidebar-buttons"
+                  to={"/#registry"}
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
@@ -128,6 +153,27 @@ const Sidebar = () => {
                   }}
                 >
                   Gallery Player
+                </NavHashLink>
+                <NavHashLink
+                  smooth
+                  activeStyle={{ fontWeight: "bold" }}
+                  className="sidebar-buttons"
+                  to={"/gallery"}
+                  onClick={() => {
+                    setShowSidebar(!showSidebar);
+                  }}
+                >
+                  Gallery
+                </NavHashLink>
+                <NavHashLink
+                  smooth
+                  className="sidebar-buttons"
+                  to={"/admin"}
+                  onClick={() => {
+                    setShowSidebar(!showSidebar);
+                  }}
+                >
+                  Admin
                 </NavHashLink>
               </div>
             </div>

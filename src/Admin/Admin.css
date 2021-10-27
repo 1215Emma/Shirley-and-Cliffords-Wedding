@@ -1,6 +1,16 @@
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .portal-wrapper {
-  background-image: url("../pages/images/beach-background.png");
-  /* background-image: url("https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-15.jpg"); */
+  /* background-image: url("../pages/images/beach-background.png"); */
+  background-image: url("https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-15.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,23 +33,14 @@
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 10%;
+  margin-top: 15%;
   font-size: 36px;
   font-weight: bold;
 }
-
-.giraffe-container {
-  position: relative;
-  margin-bottom: 3%;
-  height: 30%;
+.login-wrapper {
+  height: 40%;
+  margin-top: auto;
 }
-.cutelilgiraffe {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .credential-greeting {
   position: relative;
   margin-top: 0;
@@ -52,41 +53,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-.tab-container {
-  position: relative;
-  opacity: 0.9;
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  width: 90%;
-}
 
-.login-btn {
-  border-radius: 15px;
-  background-color: rgb(255, 123, 0);
-  border: black solid 1px;
-  font-size: 24px;
-  color: white;
-  font-weight: bold;
-  width: 100%;
-  height: 6vh;
-}
-.sign-up-btn {
-  border-radius: 15px;
-  background: transparent;
-  border: rgb(255, 123, 0) solid 4px;
-  font-size: 24px;
-  color: black;
-  font-weight: bold;
-  width: 100%;
-  height: 6vh;
-}
-.button-border {
-  border: black solid 1px;
-  height: 6vh;
-  width: 100%;
-  border-radius: 15px;
-}
 .credentials-container {
   margin-top: auto;
 }
@@ -102,6 +69,7 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  height: 100%;
 }
 .auth-form input {
   border-top: none;
@@ -112,10 +80,10 @@
   background: none;
   border-bottom: black solid 2px;
   width: 100%;
+  height: 20%;
 }
 
-.form-login-btn,
-.form-sign-up-btn {
+.form-login-btn {
   border-radius: 15px;
   background-color: rgb(255, 123, 0);
   border: black solid 1px;
@@ -125,62 +93,7 @@
   height: 6vh;
   font-weight: bold;
   margin-bottom: 4%;
-  margin-top: 0;
-  margin-top: 5%;
-}
-
-.border-style-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  bottom: 0;
-  /* margin-bottom: 11.75%; */
-}
-.border-style {
-  height: 2px;
-  width: 37.5%;
-  opacity: 0.75;
-  background-color: black;
-  margin-top: 2.2em;
-  margin-bottom: 1em;
-}
-
-.or-text {
-  color: black;
-  font-size: 24px;
-  position: relative;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  width: 1em;
-  text-align: center;
-}
-
-.below-sign-up-btn {
-  border-radius: 15px;
-  background: transparent;
-  border: rgb(255, 123, 0) solid 4px;
-  font-size: 24px;
-  color: black;
-  font-weight: bold;
-  width: 100%;
-  height: 6vh;
-}
-.below-login-btn {
-  border-radius: 15px;
-  background: transparent;
-  border: rgb(255, 123, 0) solid 4px;
-  font-size: 24px;
-  color: black;
-  font-weight: bold;
-  width: 100%;
-  height: 6vh;
-}
-.below-button-border {
-  width: 100%;
-  height: 6vh;
-  border: black solid 1px;
-  border-radius: 15px;
+  margin-top: 10%;
 }
 
 
@@ -204,7 +117,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  /* background-color: rgba(0, 0, 0, 0.8); */
+  color: rgba(255, 255, 255, 0.8);
   height: 100vh;
   width: 100%;
 }

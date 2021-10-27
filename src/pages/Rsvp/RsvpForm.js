@@ -2,27 +2,29 @@ import React from "react";
 import "./RsvpForm.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { rsvpFormSubmit } from "../../Api/Api";
-// import { rsvpFormMetadata } from "../Metadata";
-const RsvpForm = ({ data }) => {
+
+const RsvpForm = ({ data, setIsFormSubmitted }) => {
   if (data !== undefined) {
 
     const inputVal = data.body.form_input_value
-    console.log(inputVal, "inputcal")
+    console.log(inputVal)
   return (
     <div className="rsvp-form-container">
       <Formik
         initialValues={inputVal}
-        validate={(values) => {
-          const errors = {};
-          if (!values.first_name || !values.last_name || values.email) {
-            errors.main_header = "Required";
-          }
-          return errors;
-        }}
+        // validate={(values) => {
+        //   const errors = {};
+        //   if (!values.first_name || !values.last_name || values.email) {
+        //     errors.main_header = "Required";
+        //   }
+        //   return errors;
+        // }}
         onSubmit={(values, { setSubmitting }) => {
+          setIsFormSubmitted(true)
           setTimeout(() => {
             console.log(JSON.stringify(values));
             const value = JSON.stringify(values);
+            console.log(value, "value")
             rsvpFormSubmit(value);
             setSubmitting(false);
           }, 400);
@@ -144,6 +146,7 @@ const RsvpForm = ({ data }) => {
           </Form>
         )}
       </Formik>
+      
     </div>
   );
   }

@@ -4,13 +4,14 @@ import Rsvp from "./pages/Rsvp/Rsvp";
 import Main from "./pages/Main/Main";
 import Home from "./pages/Home";
 import Admin from "./Admin/Admin";
+import Gallery from './Gallery/Gallery'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   
   return (
     <Router>
-      <div className="main-container">
+
         <Switch>
           <Route exact path="/">
             <Home />
@@ -18,7 +19,7 @@ function App() {
           <Route exact path="/Admin">
             <Admin />
           </Route>
-          <Route exact path="/Main">
+          <Route exact path="/main">
             <Main />
           </Route>
           <Route exact path="/galleryplayer">
@@ -27,8 +28,11 @@ function App() {
           <Route exact path="/rsvp">
             <Rsvp />
           </Route>
+          <Route exact path="/gallery">
+            <Gallery />
+          </Route>
         </Switch>
-      </div>
+ 
     </Router>
   );
 }

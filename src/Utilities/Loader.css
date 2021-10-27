@@ -1,0 +1,14 @@
+.loader {
+  position: absolute;
+  margin-top: 80%;
+}
+
+.loader-icon {
+  font-size: 64px;
+  color: pink;
+}
+.form-submitted-message {
+  position: absolute;
+  margin-top: 80%;
+  color: rgba(255, 255, 255, 0.9);
+}

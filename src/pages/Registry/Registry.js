@@ -1,20 +1,20 @@
 import React from "react";
 import "./Registry.css";
-import PagesImages from "../images/PagesImagesConfig";
 import { useFirebaseData } from "../useFirebaseData";
+import { motion } from "framer-motion";
 const Registry = ({ page }) => {
-  // const imageIndex = PagesImages.findIndex(
-  //   (imageArray) => imageArray.id === page
-  // );
-  // const pageIndex = pages.indexOf(page);
+
   const data = useFirebaseData(page);
 
   if (data !== undefined) {
     const numOfStores = Object.values(data.body)
-    console.log(numOfStores, "numofstores")
     return (
       <>
-        <div className="section-container">
+        <motion.div
+          className="section-container"
+          initial={{ x: 0, opacity: 0 }}
+          animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
+        >
           <img
             id={page}
             className={`img-${page}`}
@@ -27,9 +27,9 @@ const Registry = ({ page }) => {
               <h2>{data.header.header_secondary}</h2>
             </div>
             <div className="all-store-container">
-              {numOfStores.map(res => {
+              {numOfStores.map((res) => {
                 return (
-                  <div className="store-container">
+                  <div className="store-container" key={res.store}>
                     <h3>{res.description}</h3>
                     <div className="button-container">
                       <button type="submit" className={`${page}-button`}>
@@ -38,12 +38,12 @@ const Registry = ({ page }) => {
                     </div>
                     <div className="style-container1" />
                     <div className="style-container2" />
-                  </div>          
-              )
+                  </div>
+                );
               })}
             </div>
           </div>
-        </div>
+        </motion.div>
       </>
     );
   } else {

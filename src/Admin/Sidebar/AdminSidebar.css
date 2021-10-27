@@ -6,7 +6,6 @@
   background-color: rgba(0, 0, 0, 0.75);
   min-width: 30vw;
   height: 100vh;
-  border: white solid 3px;
 }
 .inner-sidebar-container {
   position: absolute;

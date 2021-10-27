@@ -1,6 +1,3 @@
-export const grabData = () => {
-  
-}
 
 export const loginAuth = (value) => {
 
@@ -52,7 +49,8 @@ export const getIndividualSectionData = async (section) => {
       console.log(body);
     });
 }
-export const rsvpFormSubmit = async( value ) => {
+export const rsvpFormSubmit = (value) => {
+  console.log("hello?")
   const options = {
     method: "POST",
     headers: {
@@ -61,7 +59,7 @@ export const rsvpFormSubmit = async( value ) => {
     },
     body: value,
   };
-  await fetch("http://localhost:3001/rsvp", options)
+  fetch("http://localhost:3001/rsvp", options)
     .then((response) => response.json())
     .then((body) => {
       console.log(body);

@@ -1,2 +1,13 @@
-
-
+.dark-container {
+  height: 100vh;
+  width: 95vw;
+  background-color: rgba(0,0,0, 0.35);
+  overflow: hidden;
+}
+.form-submitted {
+  margin-top: 10%;
+  border-radius: 15px;
+}
+.form-submitted h2, h3 {
+  font-size: 28px;
+}

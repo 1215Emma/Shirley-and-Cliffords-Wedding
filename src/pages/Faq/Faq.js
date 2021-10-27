@@ -1,18 +1,18 @@
 import React from "react";
 import "./Faq.css";
-import PagesImages from "../images/PagesImagesConfig";
 import { useFirebaseData } from "../useFirebaseData";
+import { motion } from "framer-motion";
 const Faq = ({ page }) => {
-  // const imageIndex = PagesImages.findIndex(
-  //   (imageArray) => imageArray.id === page
-  // );
-  // const pageIndex = pages.indexOf(page);
+
   const data = useFirebaseData(page);
-  console.log(data);
   if (data !== undefined) {
     return (
       <>
-        <div className="section-container">
+        <motion.div
+          className="section-container"
+          initial={{ x: 0, opacity: 0 }}
+          animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
+        >
           <img
             id={page}
             className={`img-${page}`}
@@ -24,8 +24,12 @@ const Faq = ({ page }) => {
               <h1>{data.header.header_primary}</h1>
               <h2>{data.header.header_secondary}</h2>
             </div>
+            <div className="primary-body faq-body">
+              <h2>{data.body.body_primary}</h2>
+              <h2>{data.body.body_secondary}</h2>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </>
     );
   } else {

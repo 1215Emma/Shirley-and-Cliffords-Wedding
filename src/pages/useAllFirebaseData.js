@@ -1,24 +1,23 @@
-import React, { useState, useEffect } from "react";
-import { ref, onValue, get, child } from "firebase/database";
-import { database, auth } from "../Utilities/firebaseConfig";
+import { useState, useEffect } from "react";
+import {
+  ref,
+  onValue,
+} from "firebase/database";
+import { database } from "../Utilities/firebaseConfig";
 
 const useAllFirebaseData = () => {
   const [data, setData] = useState();
 
   useEffect(() => {
-    const dataRef = ref(database);
-    get(child(dataRef, `/`))
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          console.log("Main Values", snapshot.val());
-          setData(snapshot.val());
-        } else {
-          console.log("No data available");
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    const sectionRef = ref(database, "/");
+    onValue(sectionRef, (snapshot) => {
+      if (snapshot.exists()) {
+        setData(snapshot.val());
+      } else {
+        console.log("no data available");
+      }
+    });
+    // updateStarCount(postElement, data);
   }, []);
   return data;
 };

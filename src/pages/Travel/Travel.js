@@ -1,18 +1,18 @@
 import React from "react";
 import "./Travel.css";
-import PagesImages from "../images/PagesImagesConfig";
 import { useFirebaseData } from "../useFirebaseData";
-const Travel = ({ page, homeMetadata, pages }) => {
-  // const imageIndex = PagesImages.findIndex(
-  //   (imageArray) => imageArray.id === page
-  // );
-  // const pageIndex = pages.indexOf(page);
+import { motion } from 'framer-motion'
+const Travel = ({ page }) => {
+
   const data = useFirebaseData(page);
-  console.log(data);
   if (data !== undefined) {
     return (
       <>
-        <div className="section-container">
+        <motion.div
+          className="section-container"
+          initial={{ x: 0, opacity: 0 }}
+          animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
+        >
           <img
             id={page}
             className={`img-${page}`}
@@ -24,8 +24,12 @@ const Travel = ({ page, homeMetadata, pages }) => {
               <h1>{data.header.header_primary}</h1>
               <h2>{data.header.header_secondary}</h2>
             </div>
+            <div className="primary-body travel-body">
+              <h2>{data.body.body_primary}</h2>
+              <h2>{data.body.body_secondary}</h2>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </>
     );
   } else {

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import {
   BiSkipNext,
   BiSkipPrevious,
@@ -9,29 +9,28 @@ import {
 } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
 
-const GallerySlider = ({ images, paginate, imageIndex }) => {
-  const [play, setPlay] = useState(false)
+const GallerySlider = ({ paginate, page, setPage }) => {
+  const [play, setPlay] = useState(false);
   useEffect(() => {
-    if (imageIndex + 1 === images.length) {
-      setPlay(false)
+    if (page === 205) {
+      setPlay(false);
+      setPage([1, 0]);
     }
     if (play) {
       setTimeout(() => {
-        paginate(1)
-      }, 3000)
-      clearTimeout()
+        paginate(1);
+      }, 3000);
+      clearTimeout();
     }
+  }, [paginate, play, page, setPage]);
 
-  }, [paginate, play, imageIndex, images.length])
-  console.log(imageIndex, "imageIndex")
-  console.log(images.length, "images length")
   return (
     <div className="gallery-navigation">
       <div className="fake-progress-bar"></div>
       <AnimatePresence>
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: `${(imageIndex / (images.length - 1)) * 75}%` }}
+          animate={{ width: `${(page / 205) * 75}%` }}
           transition={{ duration: 1, delay: 0 }}
           className="gallery-slider"
         ></motion.div>
@@ -41,34 +40,40 @@ const GallerySlider = ({ images, paginate, imageIndex }) => {
         <button type="submit" className="gallery-navigation-buttons">
           <BiRepeat className="repeat-button" />
         </button>
-        <button
-          type="submit"
-          className="gallery-navigation-buttons"
-          onClick={() => {
-            paginate(-1);
-          }}
-        >
-          <BiSkipPrevious className="previous-button" />
-        </button>
-        {!play ? 
-        <button
-        className="gallery-navigation-buttons"
-        onClick={() => {
-          setPlay(true);
-        }}
-        >
-          <BiPlay className="playPause play-button" />
-        </button>
-          :
-        <button
-        className="gallery-navigation-buttons"
-        onClick={() => {
-          setPlay(false);
-        }}
-        >
-          <BiPause className="playPause pause-button" />
-        </button>
-        }
+        {page > 1 ? (
+          <button
+            type="submit"
+            className="gallery-navigation-buttons"
+            onClick={() => {
+              paginate(-1);
+            }}
+          >
+            <BiSkipPrevious className="previous-button" />
+          </button>
+        ) : (
+          <button type="submit" className="gallery-navigation-buttons">
+            <BiSkipPrevious className="previous-button" />
+          </button>
+        )}
+        {!play ? (
+          <button
+            className="gallery-navigation-buttons"
+            onClick={() => {
+              setPlay(true);
+            }}
+          >
+            <BiPlay className="playPause play-button" />
+          </button>
+        ) : (
+          <button
+            className="gallery-navigation-buttons"
+            onClick={() => {
+              setPlay(false);
+            }}
+          >
+            <BiPause className="playPause pause-button" />
+          </button>
+        )}
         <button
           type="submit"
           className="gallery-navigation-buttons"

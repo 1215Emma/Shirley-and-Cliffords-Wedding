@@ -1,67 +1,148 @@
-import React from 'react'
-import { Formik,Form, Field, ErrorMessage } from "formik";
-import { sectionUpdater } from '../Api/Api'
-const EditContent = ({ data }) => {
-  
-  // const setInitialValues = () => {
-  //   data.homeMetadata.map(pages => {
+import React from "react";
+import "./EditPages.css";
+import { updateFirebaseData } from "../../pages/useFirebaseData";
+import { Formik, Form, Field, ErrorMessage, FastField } from "formik";
+import generateKey from "../../Utilities/generateKey";
+const EditContent = ({ data, sectionClicked }) => {
+  if (data !== undefined) {
+    const pageKeys = Object.keys(data[sectionClicked]);
+    const pageValues = Object.values(data[sectionClicked]);
+    console.log(pageValues[1], "pageVal1")
+    return (
+      <div className="edit-content-container" key={sectionClicked}>
+        <h1>{sectionClicked}</h1>
+        <h2>{pageKeys[1]}</h2>
+        <>
+          <Formik
+            initialValues={pageValues[1]}
+            onSubmit={(values, { setSubmitting }) => {
+              setTimeout(() => {
+                const endpoint = sectionClicked;
+                updateFirebaseData(pageValues[1], endpoint, values);
+                setSubmitting(false);
+              }, 400);
+            }}
+          >
+            {({
+              values,
+              errors,
+              touched,
+              handleChange,
+              handleBlur,
+              handleSubmit,
+              isSubmitting,
+            }) => (
+              <Form onSubmit={handleSubmit} className="edit-form">
+                {Object.entries(pageValues[1]).map((res) => {
+                  console.log(res, "RES");
+                  return (
+                    <FastField
+                      component="textarea"
+                      rows="5"
+                      key={res}
+                      type="text"
+                      name={res[0]}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values[res[0]]}
+                      className="edit-form-input"
+                    />
+                  );
+                })}
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="edit-form-button"
+                >
+                  Submit header
+                </button>
+              </Form>
+            )}
+          </Formik>
+        </>
 
-  //   })
-  // }
-  return (
-    <Formik
-      initialValues={{
-        main_header: data.main_header,
-        sub_header: data.sub_header,
-      }}
-      validate={(values) => {
-        const errors = {};
-        if (!values.main_header || !values.sub_header) {
-          errors.main_header = "Required";
-        }
-        return errors;
-      }}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          const value = JSON.stringify(values);
-          sectionUpdater(value);
-          setSubmitting(false);
-        }, 400);
-      }}
-    >
-      {({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        isSubmitting,
-      }) => (
-        <Form onSubmit={handleSubmit}>
-          <Field
-            type="main_header"
-            name="main_header"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.main_header}
-          />
-          <ErrorMessage name="main_header" component="div" />
-          <Field
-            type="sub_header"
-            name="sub_header"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.sub_header}
-          />
-          <ErrorMessage name="sub_header" component="div" />
-          <button type="submit" disabled={isSubmitting}>
-            Submit
-          </button>
-        </Form>
-      )}
-    </Formik>
-  );
-}
+        <h2>{pageKeys[0]}</h2>
 
-export default EditContent
+        <Formik
+          initialValues={pageValues[0]}
+          onSubmit={(values, { setSubmitting }) => {
+            setTimeout(() => {
+              const endpoint = sectionClicked;
+              updateFirebaseData(pageValues[0], endpoint, values);
+              setSubmitting(false);
+            }, 400);
+          }}
+        >
+          {({
+            values,
+            errors,
+            touched,
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            isSubmitting,
+          }) => (
+            <Form onSubmit={handleSubmit} className="edit-form">
+              {sectionClicked === "registry" ? (
+                <>
+                  <button type="submit">+ add another store</button>
+                  {Object.entries(pageValues[0]).map((res) => {
+                    return (
+                      <>
+                        <h3 key={res[1]["store"]}>{res[1]["store"]}</h3>
+                        {Object.entries(res[1]).map((stores) => {
+                          return (
+                            <>
+                              <Field
+                                component="textarea"
+                                key={generateKey(10)}
+                                rows="5"
+                                type="text"
+                                name={values[res[0]][stores[0]]}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values[res[0]][stores[0]]}
+                                className="edit-form-input"
+                              />
+                            </>
+                          );
+                        })}
+                      </>
+                    );
+                  })}
+                </>
+              ) : (
+                  Object.entries(pageValues[0]).map((res) => {
+                    console.log(res[0])
+                    return res[0] !== "form_input_value" && res[0] !== "form_attending_status_no" && res[0] !== "form_attending_status_yes"?
+                        <Field
+                          component="textarea"
+                          key={res}
+                          rows="5"
+                          type="text"
+                          name={res[0]}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          value={values[res[0]]}
+                          className="edit-form-input"
+                        />
+                      : <></>
+                  }
+                )
+              )}
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="edit-form-button"
+              >
+                Submit body
+              </button>
+            </Form>
+          )}
+        </Formik>
+      </div>
+    );
+  }
+};
+
+export default EditContent;

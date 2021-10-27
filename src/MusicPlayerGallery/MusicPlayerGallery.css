@@ -19,7 +19,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
+  z-index: 1;
+  background-color: pink;
 }
 .outer-player-banner {
   display: flex;
@@ -67,7 +68,6 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  
 }
 
 .gallery-slider {
@@ -146,4 +146,10 @@
   padding-right: 3.5px;
   padding-top: 2.5px;
   padding-bottom: 2.5px;
+}
+
+.gallery-queue-icon {
+  font-size: 32px;
+  color: black;
+  margin-bottom: 0.25em;
 }

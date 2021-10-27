@@ -1,5 +1,5 @@
 import React from "react";
-import images from "../images/ImagesConfig";
+
 import { motion, AnimatePresence } from "framer-motion";
 
 const imageVariants = {
@@ -34,7 +34,7 @@ const swipePower = (offset, velocity) => {
   return Math.abs(offset) * velocity;
 };
 
-const FocusedImage = ({ direction, page, imageIndex, paginate}) => {
+const FocusedImage = ({ direction, page, paginate}) => {
 
   return (
     <>
@@ -42,7 +42,7 @@ const FocusedImage = ({ direction, page, imageIndex, paginate}) => {
       <AnimatePresence initial={false} custom={direction}>
           <motion.img
             key={page}
-            src={images[imageIndex].source}
+            src={`https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-${page}.jpg`}
             custom={direction}
             variants={imageVariants}
             initial="enter"

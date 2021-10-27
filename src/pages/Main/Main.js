@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Main.css";
-import PagesImages from '../images/PagesImagesConfig'
-import { useDynamicData } from "../../Api/DynamicData";
-import Sidebar from '../../Sidebar/Sidebar'
 import { useFirebaseData } from '../useFirebaseData'
+import { motion } from "framer-motion";
+
 const Main = ({ page }) => {
-  const x = "hello"
+
   const data = useFirebaseData(page)
-  console.log(data)
   if (data !== undefined) {
 
     return (
       <>
-        <Sidebar />
-        <div className="section-container">
+        <motion.div
+          className="section-container"
+          initial={{ x: 0, opacity: 0 }}
+          animate={{ x: 0, opacity: 1, transition: { duration: 0.3 } }}
+        >
           <img
             id={page}
             className={`img-${page}`}
@@ -26,8 +27,12 @@ const Main = ({ page }) => {
               <h2>{data.header.header_secondary}</h2>
               <h2>{data.header.header_tertiary}</h2>
             </div>
+            <div className="primary-body main-body">
+              <h2>{data.body.body_primary}</h2>
+              <h2>{data.body.body_secondary}</h2>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </>
     );
   } else {
