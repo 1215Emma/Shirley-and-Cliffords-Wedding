@@ -39,7 +39,7 @@ const Gallery = () => {
       animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
       exit={{ opacity: 1, y: "100%", transition: { duration: 0.5 } }}
     >
-      <div className="expanded-navigation-bar">
+      
         <HashLink
           smooth to="/gallery-player"
           activeStyle={{ fontWeight: "bold" }}
@@ -47,7 +47,7 @@ const Gallery = () => {
         >
           <BsArrowLeft className="close-expanded-icon" />
         </HashLink>
-      </div>
+      
       <AnimateSharedLayout type="crossfade">
         <div className="primary-container">
           <AnimatePresence>
