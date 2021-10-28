@@ -12,7 +12,7 @@ const Sidebar = () => {
      {
         hidden: {
           opacity: 1,
-          x: "100vw",
+          x: "100%",
         },
         visible: {
           opacity: 1,
@@ -24,7 +24,7 @@ const Sidebar = () => {
         },
         exit: {
           opacity: 1,
-          x: "100vw",
+          x: "100%",
           transition: {
             type: "sween",
             duration: 0.3,
