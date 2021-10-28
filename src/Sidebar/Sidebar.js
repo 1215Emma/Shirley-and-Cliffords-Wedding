@@ -4,12 +4,12 @@ import { HiDotsHorizontal } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 import { HashLink } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
-import { useMediaQuery } from "../Utilities/useMediaQueries/useMediaQuery";
+
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
-  const isSmall = useMediaQuery("(min-width: 500px)");
-  const containerVariants = !isSmall
-    ? {
+
+  const containerVariants = 
+     {
         hidden: {
           opacity: 1,
           x: "100vw",
@@ -31,28 +31,6 @@ const Sidebar = () => {
           },
         },
       }
-    : {
-        hidden: {
-          opacity: 1,
-          x: "100vw",
-        },
-        visible: {
-          opacity: 1,
-          x: "80vw",
-          transition: {
-            type: "sween",
-            duration: 0.3,
-          },
-        },
-        exit: {
-          opacity: 1,
-          x: "100vw",
-          transition: {
-            type: "sween",
-            duration: 0.3,
-          },
-        },
-      };
 
   const svgVariants = {
     horizontal: {
