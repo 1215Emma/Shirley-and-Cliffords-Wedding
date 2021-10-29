@@ -9,8 +9,8 @@
 .home-wrapper {
   display: flex;
   flex-direction: column;
-  max-height: 91vh;
-  min-height: 91vh;
+  max-height: 89vh;
+  min-height: 89vh;
   min-width: 100vw;
   overflow: hidden;
   /* scroll-snap-type: y mandatory;
