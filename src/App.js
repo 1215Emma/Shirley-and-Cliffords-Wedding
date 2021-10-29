@@ -1,49 +1,52 @@
+import React, { useState } from 'react'
 import "./App.css";
 import MusicPlayerGallery from "./MusicPlayerGallery/MusicPlayerGallery";
 import Rsvp from "./pages/Rsvp/Rsvp";
-import Main from "./pages/Main/Main";
 import Home from "./pages/Home";
-import Travel from './pages/Travel/Travel'
-import Faq from './pages/Faq/Faq'
+import Travel from "./pages/Travel/Travel";
+import Faq from "./pages/Faq/Faq";
 import Admin from "./Admin/Admin";
-import Gallery from './Gallery/Gallery'
+import Gallery from "./Gallery/Gallery";
 import Registry from "./pages/Registry/Registry";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import Canvas from './Canvas'
 function App() {
-  
+const [showSidebar, setShowSidebar] = useState(false);
+
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/admin">
-          <Admin />
-        </Route>
-        <Route exact path="/main">
-          <Main />
-        </Route>
-        <Route exact path="/gallery-player">
-          <MusicPlayerGallery />
-        </Route>
-        <Route exact path="/rsvp">
-          <Rsvp />
-        </Route>
-        <Route exact path="/travel">
-          <Travel />
-        </Route>
-        <Route exact path="/faq">
-          <Faq />
-        </Route>
-        <Route exact path="/registry">
-          <Registry />
-        </Route>
-        <Route exact path="/gallery">
-          <Gallery />
-        </Route>
-      </Switch>
-    </Router>
+    <>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+          </Route>
+          <Route exact path="/admin">
+            <Admin showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+          </Route>
+          <Route exact path="/gallery-player">
+            <MusicPlayerGallery
+              showSidebar={showSidebar}
+              setShowSidebar={setShowSidebar}
+            />
+          </Route>
+          <Route exact path="/rsvp">
+            <Rsvp showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+          </Route>
+          <Route exact path="/travel">
+            <Travel showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+          </Route>
+          <Route exact path="/faq">
+            <Faq showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+          </Route>
+          <Route exact path="/registry">
+            <Registry
+              showSidebar={showSidebar}
+              setShowSidebar={setShowSidebar}
+            />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
