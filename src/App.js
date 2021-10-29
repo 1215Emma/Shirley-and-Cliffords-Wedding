@@ -14,7 +14,7 @@ function App() {
 const [showSidebar, setShowSidebar] = useState(false);
 
   return (
-    <>
+    <div className="app">
       <Router>
         <Switch>
           <Route exact path="/">
@@ -46,7 +46,7 @@ const [showSidebar, setShowSidebar] = useState(false);
           </Route>
         </Switch>
       </Router>
-    </>
+    </div>
   );
 }
 

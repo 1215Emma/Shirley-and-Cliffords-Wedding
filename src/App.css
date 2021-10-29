@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Julius+Sans+One&family=Open+Sans:wght@400;700&display=swap");
-
+html, body {
+  height: 100%;
+}
 body {
   max-width: 100vw;
-  height: 100vh;
   background-color: #faf9f6;
   padding: 0;
   margin: 0;
