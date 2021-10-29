@@ -1,0 +1,18 @@
+.sidebar-nav {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.sidebar-nav-buttons {
+  text-decoration: none;
+  font-size: 12px;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  
+}

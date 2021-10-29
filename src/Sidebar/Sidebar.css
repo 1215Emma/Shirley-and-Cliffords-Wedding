@@ -1,50 +1,49 @@
 .sidebar-button-container {
-  position: sticky;
+  position: fixed;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
   z-index: 3;
   top: 0;
   right: 0;
+  height: auto;
+  width: auto;
 }
-.hamburger-horizontal {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 2.5em;
-  height: 1em;
-  /* margin-top: 0.3em;
-  margin-right: 0.4em; */
-  border-bottom-left-radius: 15px;
+
+.hamburger {
+  margin-right: 0.5em;
   right: 0;
-  /* border-radius: 20%/50%; */
-  color: white;
-  /* background: transparent; */
-  border-style: none;
-  font-size: 40px;
+}
+.hamburger-icon {
+  font-size: 3em;
 }
 .sidebar-wrapper {
   position: fixed;
-  background-color: pink;
+  background-color: rgba(255, 255, 255, 0.5);
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   z-index: 2;
   overflow: hidden;
   top: 0;
-  left: 0;
+  right: 0;
 }
 
 @media screen and (min-width: 550px) {
   .sidebar-wrapper {
-  position: fixed;
-  background-color: pink;
+  position: absolute;
+  right: 0;
+  margin-left: auto;
+  background-color: rgba(255, 192, 203, 0.75);
   height: 100vh;
-  width: 20vw;
+  width: 30vw;
   z-index: 2;
   overflow: hidden;
-
   }
 }
 .sidebar-container {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: auto;
 }
 .hamburger-vertical {
   font-size: 32px;

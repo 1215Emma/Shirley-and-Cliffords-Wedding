@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
-import { HiDotsHorizontal } from "react-icons/hi";
+
 import { motion, AnimatePresence } from "framer-motion";
 import { HashLink } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
+import { GiHamburgerMenu } from 'react-icons/gi'
 
-const Sidebar = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
 
+const Sidebar = ({ showSidebar, setShowSidebar }) => {
+  
+  
   const containerVariants = 
      {
         hidden: {
@@ -16,65 +18,73 @@ const Sidebar = () => {
         },
         visible: {
           opacity: 1,
-          x: 0,
+          x: "20%",
           transition: {
             type: "sween",
-            duration: 0.3,
+            duration: 0.5,
           },
         },
         exit: {
-          opacity: 1,
+          opacity: 0,
           x: "100%",
           transition: {
             type: "sween",
-            duration: 0.3,
+            duration: 0.5,
           },
         },
       }
 
-  const svgVariants = {
+  const hamburgerVariants = {
     horizontal: {
-      fontSize: 42,
+      x: 0,
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+      }
     },
     vertical: {
-      fontSize: 32,
+      rotate: "45deg",
+      transition: {
+        duration: 0.5,
+      },
     },
+    exit: {
+      x: 0,
+      transition: {
+        duration: 1,
+      }
+    }
   };
 
   return (
     <>
       <div className="sidebar-button-container">
-        <button
-          className="hamburger-horizontal"
-          onClick={() => {
-            setShowSidebar(!showSidebar);
-          }}
-        >
-          <AnimatePresence initial={false}>
-            {showSidebar ? (
-              <motion.svg
-                className="horizontal-svg"
-                variants={svgVariants}
-                stroke="currentColor"
-                fill="currentColor"
-                stroke-width="0"
-                viewBox="0 0 20 20"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-                initial="horizontal"
-                animate="vertical"
-              >
-                <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-              </motion.svg>
-            ) : (
-              <HiDotsHorizontal className="horizontal-svg" />
-            )}
-          </AnimatePresence>
-          {/* <HiDotsHorizontal /> */}
-        </button>
+        <AnimatePresence initial={false}>
+          {showSidebar ? (
+            <motion.div
+              className="hamburger"
+              variants={hamburgerVariants}
+              initial="horizontal"
+              animate="vertical"
+              exit="exit"
+            >
+              <GiHamburgerMenu
+                className="hamburger-icon"
+                onClick={() => setShowSidebar(!showSidebar)}
+              />
+            </motion.div>
+          ) : (
+            <motion.div className="hamburger" whileHover={{ scale: 1.2 }}>
+              <GiHamburgerMenu
+                className="hamburger-icon"
+                onClick={() => setShowSidebar(!showSidebar)}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+        {/* <HiDotsHorizontal /> */}
       </div>
-      <AnimatePresence initial={false}>
+      <AnimatePresence initial={false} exitBeforeEnter>
         {showSidebar && (
           <motion.div
             className="sidebar-wrapper"
@@ -91,8 +101,8 @@ const Sidebar = () => {
                 }}
               ></button>
               <div className="sidebar-links">
-                <HashLink
-                  smooth to="/#main"
+                <NavLink
+                  to="/"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
                   onClick={() => {
@@ -100,10 +110,9 @@ const Sidebar = () => {
                   }}
                 >
                   Home
-                </HashLink>
-                <HashLink
-                  smooth
-                  to="/#travel"
+                </NavLink>
+                <NavLink
+                  to="/travel"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
                   onClick={() => {
@@ -111,10 +120,9 @@ const Sidebar = () => {
                   }}
                 >
                   Travel
-                </HashLink>
-                <HashLink
-                  smooth
-                  to="/#rsvp"
+                </NavLink>
+                <NavLink
+                  to="/rsvp"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
                   onClick={() => {
@@ -122,10 +130,9 @@ const Sidebar = () => {
                   }}
                 >
                   RSVP
-                </HashLink>
-                <HashLink
-                  smooth
-                  to="/#faq"
+                </NavLink>
+                <NavLink
+                  to="/faq"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
                   onClick={() => {
@@ -133,10 +140,9 @@ const Sidebar = () => {
                   }}
                 >
                   Faq
-                </HashLink>
-                <HashLink
-                  smooth
-                  to="/#registry"
+                </NavLink>
+                <NavLink
+                  to="/registry"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
                   onClick={() => {
@@ -144,9 +150,8 @@ const Sidebar = () => {
                   }}
                 >
                   Registry
-                </HashLink>
+                </NavLink>
                 <NavLink
-                  smooth
                   to="/gallery-player"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
@@ -157,18 +162,6 @@ const Sidebar = () => {
                   Gallery Player
                 </NavLink>
                 <NavLink
-                  smooth
-                  activeStyle={{ fontWeight: "bold" }}
-                  className="sidebar-buttons"
-                  to="/gallery"
-                  onClick={() => {
-                    setShowSidebar(!showSidebar);
-                  }}
-                >
-                  Gallery
-                </NavLink>
-                <NavLink
-                  smooth
                   className="sidebar-buttons"
                   to="/admin"
                   onClick={() => {

@@ -1,0 +1,23 @@
+/* .konva-stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow-y: scroll;
+  animation: fall 240s linear infinite ;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 1;
+    top: -50%;
+    transform: translate3d (0, 0, 0);
+    }
+    100%{        
+        top:150%;
+        transform:translate3d (-1692px, 0, 0);
+    }
+
+}
+  
+   */

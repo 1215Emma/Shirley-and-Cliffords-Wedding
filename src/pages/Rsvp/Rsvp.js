@@ -4,52 +4,67 @@ import RsvpForm from "./RsvpForm";
 import { useFirebaseData } from "../useFirebaseData";
 import { motion } from "framer-motion";
 import Loader from "../../Utilities/Loader";
-const Rsvp = ({ page }) => {
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const data = useFirebaseData(page);
+import Sidebar from "../../Sidebar/Sidebar";
+import { homeVariants, homeCloseVariants } from "../Variants/PageVariants";
 
-  if (data !== undefined) {
+const Rsvp = ({ showSidebar, setShowSidebar }) => {
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const page = "rsvp"
+  const data = useFirebaseData(page);
+  const rsvpRender = () => {
     return (
-      <>
+      <motion.div
+        className="rsvp-wrapper"
+        variants={showSidebar ? homeVariants : homeCloseVariants}
+        initial={showSidebar ? "show" : "pushed"}
+        animate={showSidebar ? "push" : "closed"}
+      >
         <motion.div
           className="section-container"
           initial={{ x: 0, opacity: 0 }}
           animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
         >
-          <img
-            id={page}
-            src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-198.jpg"
-            className={`img-${page}`}
-            alt="Shirley and Clifford kissing between streets"
-          />
-          <div className="section-no-image">
-            {!isFormSubmitted ? (
-              <>
-                <div className="primary-header rsvp-primary">
-                  <h1>{data.header.header_primary}</h1>
-                  <h2>{data.header.header_secondary}</h2>
-                  <h2>{data.body.form_header}</h2>
+          {!isFormSubmitted ? (
+            <>
+              <div className="primary-header rsvp-primary">
+                <h1>{data.header.header_primary}</h1>
+                <h2>{data.header.header_secondary}</h2>
+              </div>
+              <img
+                id={page}
+                src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-198.jpg"
+                className={`img-${page}`}
+                alt="Shirley and Clifford kissing between streets"
+              />
+              <div className="primary-body rsvp-body">
+                <h2>{data.body.form_header}</h2>
+              </div>
+              <RsvpForm data={data} setIsFormSubmitted={setIsFormSubmitted} />
+            </>
+          ) : (
+            <>
+              <motion.div
+                className="dark-container"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { duration: 0.5 } }}
+              >
+                <div className="primary-header form-submitted">
+                  <h2>Thanks for RSVPing!</h2>
+                  <h3>We're excited to see you</h3>
                 </div>
-                <RsvpForm data={data} setIsFormSubmitted={setIsFormSubmitted} />
-              </>
-            ) : (
-              <>
-                <motion.div
-                  className="dark-container"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1, transition: { duration: 0.5 } }}
-                >
-                  
-                  <div className="primary-header form-submitted">
-                    <h2>Thanks for RSVPing!</h2>
-                    <h3>We're excited to see you</h3>
-                  </div>
-                </motion.div>
-                <Loader />
-              </>
-            )}
-          </div>
+              </motion.div>
+              <Loader />
+            </>
+          )}
         </motion.div>
+      </motion.div>
+    );
+  };
+  if (data !== undefined) {
+    return (
+      <>
+        <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+        {rsvpRender()}
       </>
     );
   } else {
