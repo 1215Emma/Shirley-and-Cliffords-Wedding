@@ -1,5 +1,6 @@
 .sidebar-button-container {
   position: fixed;
+  display: block;
   margin-top: 0.5em;
   margin-right: 0.5em;
   z-index: 3;
@@ -19,7 +20,7 @@
 .sidebar-wrapper {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.5);
-  height: 100vh;
+  height: 100%;
   width: 100%;
   z-index: 2;
   overflow: hidden;
@@ -57,8 +58,8 @@
 .sidebar-links {
   display: flex;
   flex-direction: column;
-  padding-top: 10%;
-  padding-left: 5%;
+  margin-top: 10%;
+  margin-left: 5%;
 }
 .sidebar-buttons {
   text-decoration: none;

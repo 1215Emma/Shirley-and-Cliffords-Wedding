@@ -9,24 +9,29 @@ import Admin from "./Admin/Admin";
 import Gallery from "./Gallery/Gallery";
 import Registry from "./pages/Registry/Registry";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useWindowSize } from "./Utilities/useWindowSize";
+
 import Canvas from "./Canvas";
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
-  function resetHeight() {
+  const [width, height] = useWindowSize()
+  const resetHeight = () => {
     // reset the body height to that of the inner browser
-    document.body.style.height = `${window.innerHeight + 100}px`;
+    return (
+      document.body.style.height = window.innerHeight + "px"
+      )
   }
   // reset the height whenever the window's resized
   window.addEventListener("resize", resetHeight);
   // called to initially set the height.
   resetHeight();
-
+  console.log(resetHeight())
   return (
     <div className="app">
       <Router>
         <Switch>
           <Route exact path="/">
-            <Home showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+            <Home showSidebar={showSidebar} setShowSidebar={setShowSidebar} height={height} width={width} />
           </Route>
           <Route exact path="/admin">
             <Admin showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
