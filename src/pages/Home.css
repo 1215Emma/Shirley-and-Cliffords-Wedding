@@ -6,14 +6,12 @@
   margin-top: auto;
   margin-bottom: auto;
 } */
-:root {
-  --height: 1000px;
-}
+
 .home-wrapper {
   visibility: visible;
   position: relative;
   padding: 0px;
-  overflow: hidden;
+  overflow-x: hidden;
   max-width: none!important;
   margin-bottom: 0;
   display: block;
