@@ -12,6 +12,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Canvas from './Canvas'
 function App() {
 const [showSidebar, setShowSidebar] = useState(false);
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
 
   return (
     <div className="app">

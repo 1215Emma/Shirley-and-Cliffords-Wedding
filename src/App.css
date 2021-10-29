@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Julius+Sans+One&family=Open+Sans:wght@400;700&display=swap");
-html, body {
+html,
+body {
   height: 100%;
 }
 body {
@@ -12,7 +13,10 @@ body {
   overflow-y: scroll;
   padding-bottom: env(safe-area-inset-bottom);
 }
-
+.app {
+  height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+}
 /* .main-container {
   height: 100vh;
   width: 100vw;
