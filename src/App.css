@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Julius+Sans+One&family=Open+Sans:wght@400;700&display=swap");
 html {
-  height: 89vh;
+  height: 100vh;
   min-height: -webkit-fill-available;
   position: fixed;
 }
@@ -18,7 +18,7 @@ body {
   margin: 0 auto;
 }
 .app {
-  height: 89vh;
+  height: 100vh;
   overflow: hidden;
 }
 /* .main-container {
