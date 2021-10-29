@@ -9,7 +9,7 @@
 .home-wrapper {
   display: flex;
   flex-direction: column;
-  height: auto;
+  max-height: 100vh;
   min-height: 100vh;
   min-width: 100vw;
   overflow: hidden;
