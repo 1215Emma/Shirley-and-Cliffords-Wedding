@@ -14,7 +14,9 @@ import { useWindowSize } from "./Utilities/useWindowSize";
 import Canvas from "./Canvas";
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
-  const [width, height] = useWindowSize()
+  const [height, width] = useWindowSize()
+  console.log(width, "width")
+  console.log(height, "height")
   const resetHeight = () => {
     // reset the body height to that of the inner browser
     return (
@@ -27,7 +29,7 @@ function App() {
   resetHeight();
   console.log(resetHeight())
   return (
-    <div className="app">
+    <div className="app" style={{height: `${height}px`, width: `${width}px`}}>
       <Router>
         <Switch>
           <Route exact path="/">

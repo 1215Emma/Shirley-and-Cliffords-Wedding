@@ -16,10 +16,10 @@ body {
 }
 .app {
   display: block;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   overflow-x: hidden;
-  height: auto;
-  width: 100%;
 }
 /* .main-container {
   height: 100vh;
