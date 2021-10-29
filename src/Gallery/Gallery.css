@@ -18,7 +18,10 @@
 .main-primary {
   position: relative;
   overflow: hidden;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   left: 0;
   margin-top: 5em;
@@ -27,6 +30,7 @@
 .main-primary h1 {
   font-size: 2rem;
   margin-bottom: 1em;
+  width: 10em;
 }
 .main-primary::after {
   content: "___________________________________"

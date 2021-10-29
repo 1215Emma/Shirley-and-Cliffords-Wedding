@@ -11,12 +11,11 @@ body {
   background-color: #faf9f6;
   padding: 0;
   margin: 0;
-  overflow-y: scroll;
-  overflow-x: hidden;
+
 }
 .app {
   display: block;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   overflow-x: hidden;

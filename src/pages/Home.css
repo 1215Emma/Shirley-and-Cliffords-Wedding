@@ -11,7 +11,7 @@
   visibility: visible;
   position: relative;
   padding: 0px;
-  overflow-x: hidden;
+  overflow-y: scroll;
   max-width: none!important;
   margin-bottom: 0;
   display: block;
