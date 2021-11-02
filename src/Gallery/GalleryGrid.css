@@ -1,0 +1,23 @@
+.gallery-queue {
+  display: flex;
+  font-size: 32px;
+  background-color: transparent;
+  border-style: none;
+  padding-bottom: 1em;
+  width: 100%;
+  justify-content: flex-end;
+  margin-right: 2em;
+  position: relative;
+}
+
+
+.gallery-queue-x {
+  font-size: 48px;
+  border-style: none;
+  background: transparent;
+  margin-left: auto;
+  margin-top: 0.3em;
+  margin-right: 0.5em;
+  margin-left: 80%;
+  color: white;
+}

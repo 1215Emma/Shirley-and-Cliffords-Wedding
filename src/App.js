@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import MusicPlayerGallery from "./MusicPlayerGallery/MusicPlayerGallery";
+// import MusicPlayerGallery from "./MusicPlayerGallery/MusicPlayerGallery";
 import Rsvp from "./pages/Rsvp/Rsvp";
 import Home from "./pages/Home";
 import Travel from "./pages/Travel/Travel";
 import Faq from "./pages/Faq/Faq";
 import Admin from "./Admin/Admin";
-import Gallery from "./Gallery/Gallery";
 import Registry from "./pages/Registry/Registry";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import { debounce } from "./Utilities/useWindowSize";
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -42,34 +40,62 @@ function App() {
   }, [windowDimensions])
 
   return (
-    <div className="app" style={{height: `${windowDimensions.height}px`, width: `${windowDimensions.width}px`}}>
+    <div
+      className="app"
+      style={{
+        height: `${windowDimensions.height}px`,
+        width: `${windowDimensions.width}px`,
+      }}
+    >
       <Router>
         <Switch>
           <Route exact path="/">
-            <Home showSidebar={showSidebar} setShowSidebar={setShowSidebar} height={windowDimensions.height} width={windowDimensions.width} />
+            <Home
+              showSidebar={showSidebar}
+              setShowSidebar={setShowSidebar}
+              height={windowDimensions.height}
+              width={windowDimensions.width}
+            />
           </Route>
           <Route exact path="/admin">
             <Admin showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
           </Route>
-          <Route exact path="/gallery-player">
+          {/* <Route exact path="/gallery-player">
             <MusicPlayerGallery
               showSidebar={showSidebar}
               setShowSidebar={setShowSidebar}
             />
-          </Route>
+          </Route> */}
           <Route exact path="/rsvp">
-            <Rsvp showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+            <Rsvp
+              showSidebar={showSidebar}
+              setShowSidebar={setShowSidebar}
+              height={windowDimensions.height}
+              width={windowDimensions.width}
+            />
           </Route>
           <Route exact path="/travel">
-            <Travel showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+            <Travel
+              showSidebar={showSidebar}
+              setShowSidebar={setShowSidebar}
+              height={windowDimensions.height}
+              width={windowDimensions.width}
+            />
           </Route>
           <Route exact path="/faq">
-            <Faq showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+            <Faq
+              showSidebar={showSidebar}
+              setShowSidebar={setShowSidebar}
+              height={windowDimensions.height}
+              width={windowDimensions.width}
+            />
           </Route>
           <Route exact path="/registry">
             <Registry
               showSidebar={showSidebar}
               setShowSidebar={setShowSidebar}
+              height={windowDimensions.height}
+              width={windowDimensions.width}
             />
           </Route>
         </Switch>

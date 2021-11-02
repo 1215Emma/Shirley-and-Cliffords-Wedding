@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Sidebar.css";
-
 import { motion, AnimatePresence } from "framer-motion";
-import { HashLink } from "react-router-hash-link";
+
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from 'react-icons/gi'
 
@@ -151,7 +150,7 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
                 >
                   Registry
                 </NavLink>
-                <NavLink
+                {/* <NavLink
                   to="/gallery-player"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
@@ -160,7 +159,7 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
                   }}
                 >
                   Gallery Player
-                </NavLink>
+                </NavLink> */}
                 <NavLink
                   className="sidebar-buttons"
                   to="/admin"

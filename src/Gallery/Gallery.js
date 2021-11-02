@@ -2,8 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Gallery.css";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import imageUrls from "../images/imageUrls.json";
-import { BsArrowLeft, BsChevronCompactRight } from "react-icons/bs";
-import { HashLink } from "react-router-hash-link";
+import { BsChevronCompactRight } from "react-icons/bs";
 import { useFirebaseData } from "../pages/useFirebaseData";
 
 const Images = ({ image, onExpand }) => {
@@ -25,7 +24,6 @@ const Gallery = () => {
   const [allImages, setAllImages] = useState(
     Object.keys(imageUrls).filter((primary) => primary !== primaryImage)
   );
-  const [galleryClicked, setGalleryClicked] = useState(false)
   const timeoutRef = useRef(null)
 
   function setAsPrimary(image) {
@@ -65,17 +63,6 @@ const Gallery = () => {
         animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
         exit={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
       >
-        {/* <HashLink
-          smooth
-          to="/gallery-player"
-          activeStyle={{ fontWeight: "bold" }}
-          className="close-expanded-button"
-        >
-          <BsArrowLeft className="close-expanded-icon" />
-        </HashLink> */}
-        {/* <div className="gallery-side">
-      <img className="tikitotem"src={TikiTotem} alt=""></img>
-      </div> */}
 
         <AnimateSharedLayout type="crossfade">
           <div className="primary-container">

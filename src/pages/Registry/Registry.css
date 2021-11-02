@@ -2,7 +2,7 @@
 .all-store-container {
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 80%;
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
@@ -26,10 +26,12 @@
   margin: 0;
 }
 .store-container {
+  margin-top: 1em;
   position: relative;
+  
   display: flex;
   flex-direction: column;
-  border: white solid 2px;
+  border: black solid 2px;
   align-items: center;
   justify-content: space-between;
   height: auto;
@@ -40,9 +42,10 @@
   border-radius: 5%;
 }
 .store-container h3 {
-  color: white;
+  color: black;
   margin-left: 0.5em;
   margin-bottom: 20%;
+  font-size: 1em;
 }
 
 .style-container1 {
@@ -52,9 +55,9 @@
   bottom: 0;
   height: 89%;
   width: 24.5%;
-  border-bottom: white solid 2px;
+  border-bottom: black solid 2px;
   border-top-left-radius: 10%;
-  border-left: white solid 2px;
+  border-left: black solid 2px;
 }
 .style-container2 {
   position: absolute;
@@ -62,7 +65,7 @@
   right: 0;
   height: 89%;
   width: 24.5%;
-  border-bottom: white solid 2px;
+  border-bottom: black solid 2px;
   border-top-right-radius: 10%;
-  border-right: white solid 2px;
+  border-right: black solid 2px;
 }

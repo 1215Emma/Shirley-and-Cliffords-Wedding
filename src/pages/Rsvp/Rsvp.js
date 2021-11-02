@@ -6,8 +6,9 @@ import { motion } from "framer-motion";
 import Loader from "../../Utilities/Loader";
 import Sidebar from "../../Sidebar/Sidebar";
 import { homeVariants, homeCloseVariants } from "../Variants/PageVariants";
-
-const Rsvp = ({ showSidebar, setShowSidebar }) => {
+import HeaderBannerBg from "../images/header-banner.png";
+import HawaiiBorder from "../images/hawaii-border2.png";
+const Rsvp = ({ showSidebar, setShowSidebar, height, width }) => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const page = "rsvp"
   const data = useFirebaseData(page);
@@ -18,7 +19,18 @@ const Rsvp = ({ showSidebar, setShowSidebar }) => {
         variants={showSidebar ? homeVariants : homeCloseVariants}
         initial={showSidebar ? "show" : "pushed"}
         animate={showSidebar ? "push" : "closed"}
+        style={{ height: `${height}px`, width: `${width}px` }}
       >
+        <div className="header-banner-container">
+          <img
+            src={HeaderBannerBg}
+            alt="header banner"
+            className="header-banner-bg"
+          />
+              <div className="primary-header rsvp-primary">
+                <h1>{data.header.header_primary}</h1>
+              </div>
+        </div>
         <motion.div
           className="section-container"
           initial={{ x: 0, opacity: 0 }}
@@ -26,16 +38,12 @@ const Rsvp = ({ showSidebar, setShowSidebar }) => {
         >
           {!isFormSubmitted ? (
             <>
-              <div className="primary-header rsvp-primary">
-                <h1>{data.header.header_primary}</h1>
-                <h2>{data.header.header_secondary}</h2>
-              </div>
-              <img
+              {/* <img
                 id={page}
                 src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-198.jpg"
                 className={`img-${page}`}
                 alt="Shirley and Clifford kissing between streets"
-              />
+              /> */}
               <div className="primary-body rsvp-body">
                 <h2>{data.body.form_header}</h2>
               </div>
@@ -57,6 +65,11 @@ const Rsvp = ({ showSidebar, setShowSidebar }) => {
             </>
           )}
         </motion.div>
+        <img
+          src={HawaiiBorder}
+          alt="hawaiian themed border"
+          className="hawaii-border"
+        />
       </motion.div>
     );
   };

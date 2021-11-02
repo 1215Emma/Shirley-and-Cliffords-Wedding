@@ -17,7 +17,6 @@ const useAllFirebaseData = () => {
         console.log("no data available");
       }
     });
-    // updateStarCount(postElement, data);
   }, []);
   return data;
 };

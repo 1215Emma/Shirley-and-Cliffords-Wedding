@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 import EditContent from "./Edit/EditContent";
 import Login from "./Login/Login";
 import Sidebar from "../Sidebar/Sidebar";
+import { homeVariants, homeCloseVariants } from "../pages/Variants/PageVariants"
+const Admin = ({ showSidebar, setShowSidebar }) => {
 
-const Admin = () => {
-  // const [isDataLoaded, setIsDataLoaded] = useState(true);
   const data = useAllFirebaseData();
   const [user, setUser] = useState({});
   const [sectionClicked, setSectionClicked] = useState("");
@@ -42,56 +42,73 @@ const Admin = () => {
       },
     },
   };
-  return (
-    <div className="main-container">
+  const adminRender = () => {
+    return (
       <motion.div
-        className="portal-wrapper"
-        initial={{ x: 0, opacity: 0 }}
-        animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
+        className="main-container"
+        variants={showSidebar ? homeVariants : homeCloseVariants}
+        initial={showSidebar ? "show" : "pushed"}
+        animate={showSidebar ? "push" : "closed"}
       >
-        <Sidebar />
-        {!user ? (
-          <>
-            <h1 className="login-header">
-              Shirley and Clifford's secret paradise
-            </h1>
+        <motion.div
+          className="portal-wrapper"
+          initial={{ x: 0, opacity: 0 }}
+          animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
+        >
+          <Sidebar />
+          {!user ? (
+            <>
+              <h1 className="login-header">
+                Shirley and Clifford's secret paradise
+              </h1>
 
-            <Login />
-          </>
-        ) : (
-          <div className="admin-panel-container">
-            <AdminSidebar
-              setSectionClicked={setSectionClicked}
-              sectionClicked={sectionClicked}
-              isSidebarExpanded={isSidebarExpanded}
-              setIsSidebarExpanded={setIsSidebarExpanded}
-              data={data}
-            />
-            {sectionClicked !== "" && !isSidebarExpanded && (
-              <motion.div
-                className="edit-sections-container"
-                variants={contentVariants}
-                initial="hidden"
-                animate="visible"
-              >
-                {<EditContent data={data} sectionClicked={sectionClicked} />}
-              </motion.div>
-            )}
-            {sectionClicked !== "" && isSidebarExpanded && (
-              <motion.div
-                className="edit-sections-container"
-                variants={contentVariants}
-                initial="visible2"
-                animate="visible3"
-              >
-                {<EditContent data={data} sectionClicked={sectionClicked} />}
-              </motion.div>
-            )}
-          </div>
-        )}
+              <Login />
+            </>
+          ) : (
+            <div className="admin-panel-container">
+              <AdminSidebar
+                setSectionClicked={setSectionClicked}
+                sectionClicked={sectionClicked}
+                isSidebarExpanded={isSidebarExpanded}
+                setIsSidebarExpanded={setIsSidebarExpanded}
+                data={data}
+              />
+              {sectionClicked !== "" && !isSidebarExpanded && (
+                <motion.div
+                  className="edit-sections-container"
+                  variants={contentVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  {<EditContent data={data} sectionClicked={sectionClicked} />}
+                </motion.div>
+              )}
+              {sectionClicked !== "" && isSidebarExpanded && (
+                <motion.div
+                  className="edit-sections-container"
+                  variants={contentVariants}
+                  initial="visible2"
+                  animate="visible3"
+                >
+                  {<EditContent data={data} sectionClicked={sectionClicked} />}
+                </motion.div>
+              )}
+            </div>
+          )}
+        </motion.div>
       </motion.div>
-    </div>
-  );
+    );
+  }
+  if (data !== undefined) {
+    return (
+      <>
+        <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+        {adminRender()}
+        </>
+      );
+  } else {
+    return <></>
+    }
 };
 
 export default Admin;

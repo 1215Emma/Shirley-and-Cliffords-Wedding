@@ -82,6 +82,7 @@ const RsvpForm = ({ data, setIsFormSubmitted }) => {
             <div className="form-group attending-status-group">
               <div className="form-radio-group" />
               <label>{data.body.form_attending_status}</label>
+              <div className="form-radio-button-group">
               <div className="form-attending-status-group-individual">
                 <Field
                   type="radio"
@@ -102,9 +103,10 @@ const RsvpForm = ({ data, setIsFormSubmitted }) => {
                 />
                 <label>{data.body.form_attending_status_no}</label>
               </div>
+              </div>
               <ErrorMessage name="attending_status" component="div" />
             </div>
-            <div className="form-group">
+            <div className="form-group guests">
               <label>{data.body.form_guests}</label>
               <Field
                 type="text"
@@ -116,7 +118,7 @@ const RsvpForm = ({ data, setIsFormSubmitted }) => {
 
               <ErrorMessage name="guests" component="div" />
             </div>
-            <div className="form-group">
+            <div className="form-group food">
               <label>{data.body.form_food_restrictions}</label>
               <Field
                 type="text"
@@ -128,7 +130,7 @@ const RsvpForm = ({ data, setIsFormSubmitted }) => {
 
               <ErrorMessage name="food_restrictions" component="div" />
             </div>
-            <div className="form-group">
+            <div className="form-group questions">
               <label>{data.body.form_questions}</label>
               <Field
                 type="text"

@@ -1,29 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.css";
-import Rsvp from "./Rsvp/Rsvp";
-import Registry from "./Registry/Registry";
-import Travel from "./Travel/Travel";
-import Faq from "./Faq/Faq";
 import Sidebar from "../Sidebar/Sidebar";
 import useAllFirebaseData from "./useAllFirebaseData";
-import { motion, AnimatePresence } from "framer-motion";
-import Canvas from "../Canvas";
-import SidebarNav from "../sidebarNav/SidebarNav";
+import { motion } from "framer-motion";
 import Gallery from "../Gallery/Gallery";
-import { useWindowSize } from '../Utilities/useWindowSize'
 import { homeVariants, homeCloseVariants } from './Variants/PageVariants'
 const Home = ({ showSidebar, setShowSidebar, height, width }) => {
 
-  // const [height, width] = useWindowSize()
-  // console.log(height, width)
-  // let root = document.querySelector(":root");
-  // let rootStyles = getComputedStyle(root);
-  // let vertHeight = rootStyles.getPropertyValue("--full-height");
-  // console.log(vertHeight);
-  // window.addEventListener("resize", resetHeight);
-  // root.style.setProperty("--full-height", height)
-  
-  
   const data = useAllFirebaseData();
   const homeRender = () => {
     return (
