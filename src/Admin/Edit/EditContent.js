@@ -7,7 +7,7 @@ const EditContent = ({ data, sectionClicked }) => {
   if (data !== undefined) {
     const pageKeys = Object.keys(data[sectionClicked]);
     const pageValues = Object.values(data[sectionClicked]);
-    console.log(pageValues[1], "pageVal1")
+    console.log(pageKeys[1], "pageVal1")
     return (
       <div className="edit-content-container" key={sectionClicked}>
         <h1>{sectionClicked}</h1>
@@ -18,7 +18,9 @@ const EditContent = ({ data, sectionClicked }) => {
             onSubmit={(values, { setSubmitting }) => {
               setTimeout(() => {
                 const endpoint = sectionClicked;
-                updateFirebaseData(pageValues[1], endpoint, values);
+                console.log(pageValues[1], "in timeout")
+                console.log(endpoint, "endpoint")
+                updateFirebaseData(endpoint, pageKeys[1], values);
                 setSubmitting(false);
               }, 400);
             }}
@@ -68,7 +70,7 @@ const EditContent = ({ data, sectionClicked }) => {
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
               const endpoint = sectionClicked;
-              updateFirebaseData(pageValues[0], endpoint, values);
+              updateFirebaseData(endpoint, pageKeys[0], values);
               setSubmitting(false);
             }, 400);
           }}

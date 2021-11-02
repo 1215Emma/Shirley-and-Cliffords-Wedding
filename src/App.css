@@ -21,3 +21,15 @@ body {
   top: 0;
   left: 0;
 }
+
+.app::before {
+  content: "";
+  background-image: url('./pages/images/hawaii-repeat-bg2.jpg');
+  position: absolute;
+  background-size: repeat;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.75;
+}

@@ -29,10 +29,10 @@ export const useFirebaseData = (page) => {
 }
 
 // updates firebase data based on the section provided
-export const updateFirebaseData = (page, endpoint, values) => {
+export const updateFirebaseData = (endpoint, page, values) => {
   console.log(values)
   set(
-    ref(database, `${page}/${endpoint}`),
+    ref(database, `${endpoint}/${page}`),
     values
   )
     .then(() => {
