@@ -80,7 +80,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
-  opacity: 0.75;
+  
   animation: zoom-out 30s ease-out infinite;
 }
 @keyframes zoom-out {
