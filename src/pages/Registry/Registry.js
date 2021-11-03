@@ -25,11 +25,6 @@ const Registry = ({ showSidebar, setShowSidebar, height, width }) => {
       >
         <div className="inner inner-wrapper-registry">
           <div className="header-banner-container">
-            {/* <img
-            src={HeaderBannerBg}
-            alt="header banner"
-            className="header-banner-bg"
-          /> */}
             <div className="primary-header registry-primary">
               <h1>{data.header.header_primary}</h1>
             </div>
@@ -39,12 +34,6 @@ const Registry = ({ showSidebar, setShowSidebar, height, width }) => {
             initial={{ x: 0, opacity: 0 }}
             animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
           >
-            {/* <img
-            id={page}
-            className={`img-${page}`}
-            src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-164.jpg"
-            alt="Shirley and Clifford sharing a kiss"
-          /> */}
             <div className="all-store-container">
               {numOfStores.map((res) => {
                 console.log(res, "RESSSSPDOS");
@@ -59,27 +48,13 @@ const Registry = ({ showSidebar, setShowSidebar, height, width }) => {
                           className={`registry-img ${res.store}`}
                         />
                       </button>
-                      {/* <h2>{res.store}</h2> */}
                     </div>
-                    <div className="style-container1" />
-                    <div className="style-container2" />
                   </div>
                 );
               })}
             </div>
           </motion.div>
-          {/* <img
-          src={HawaiiBorder}
-          alt="hawaiian themed border"
-          className="hawaii-border"
-        /> */}
-          <img src={FlowerBorder} alt="" className="flower-border-registry" />
         </div>
-        {/* <img
-          src={SevenLionsFooter}
-          alt="Footer of a seven lions album art"
-          className="footer"
-        /> */}
       </motion.div>
     );
   };
