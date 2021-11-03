@@ -25,8 +25,12 @@
 }
 
 .flower-border {
-  position: relative;
-  left: 0;
-  width: 100%;
-  margin-top: -2.2rem;
+  position: absolute;
+  left: 1rem;
+  margin-top: -3rem;
+  /* margin-top: 0.5em; */
+  height: 25%;
+  z-index: 1;
+  transform: rotate(45deg);
+  overflow: hidden;
 }

@@ -7,7 +7,7 @@ import { homeVariants, homeCloseVariants } from "../Variants/PageVariants";
 import HeaderBannerBg from '../images/header-banner.png'
 import HawaiiBorder from '../images/hawaii-border2.png'
 import PalmTreeCow from '../images/palm-tree-cow.png'
-import FlowerBorder from '../images/flower-border.png'
+import FlowerBorder from '../images/flower-border-vertical.png'
 const Travel = ({ showSidebar, setShowSidebar, height, width }) => {
   const page = "travel";
   const data = useFirebaseData(page);
@@ -21,8 +21,8 @@ const Travel = ({ showSidebar, setShowSidebar, height, width }) => {
         animate={showSidebar ? "push" : "closed"}
         style={{ height: "auto", width: `${width}px` }}
       >
-        <div className="inner inner-wrapper-travel">
           <img src={FlowerBorder} alt="" className="flower-border" />
+        <div className="inner inner-wrapper-travel">
         <div className="header-banner-container">
           <div className="primary-header travel-primary">
             <h1>{data.header.header_primary}</h1>
