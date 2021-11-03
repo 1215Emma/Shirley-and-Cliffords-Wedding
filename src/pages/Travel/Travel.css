@@ -1,3 +1,32 @@
 .travel-wrapper {
-  background-image: url("../images//hawaii-repeat-bg.jpg");
+  /* background-image: url("../images/hawaii-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain; */
+  /* background-color: #ffffff; */
+
+}
+.inner-wrapper-travel {
+  position: relative;
+  margin-top: 2em;
+  border: black solid 2px;
+  border-bottom: none;
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.palm-tree-cow {
+  position: relative;
+  order: 2;
+  left: 0;
+  bottom: 0;
+  margin-top: auto;
+  width: 30%;
+}
+
+.flower-border {
+  position: relative;
+  left: 0;
+  width: 100%;
+  margin-top: -2.2rem;
 }

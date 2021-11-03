@@ -8,7 +8,7 @@ import Faq from "./pages/Faq/Faq";
 import Admin from "./Admin/Admin";
 import Registry from "./pages/Registry/Registry";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import SevenLionsFooter from './pages/images/footer.png'
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
 
@@ -100,6 +100,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      
     </div>
   );
 }

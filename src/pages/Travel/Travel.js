@@ -6,6 +6,8 @@ import Sidebar from "../../Sidebar/Sidebar";
 import { homeVariants, homeCloseVariants } from "../Variants/PageVariants";
 import HeaderBannerBg from '../images/header-banner.png'
 import HawaiiBorder from '../images/hawaii-border2.png'
+import PalmTreeCow from '../images/palm-tree-cow.png'
+import FlowerBorder from '../images/flower-border.png'
 const Travel = ({ showSidebar, setShowSidebar, height, width }) => {
   const page = "travel";
   const data = useFirebaseData(page);
@@ -17,20 +19,17 @@ const Travel = ({ showSidebar, setShowSidebar, height, width }) => {
         variants={showSidebar ? homeVariants : homeCloseVariants}
         initial={showSidebar ? "show" : "pushed"}
         animate={showSidebar ? "push" : "closed"}
-        style={{ height: `${height}px`, width: `${width}px` }}
+        style={{ height: "auto", width: `${width}px` }}
       >
+        <div className="inner inner-wrapper-travel">
+          <img src={FlowerBorder} alt="" className="flower-border" />
         <div className="header-banner-container">
-          <img
-            src={HeaderBannerBg}
-            alt="header banner"
-            className="header-banner-bg"
-          />
           <div className="primary-header travel-primary">
             <h1>{data.header.header_primary}</h1>
           </div>
         </div>
         <motion.div
-          className="section-container"
+          className="section-container travel-container"
           initial={{ x: 0, opacity: 0 }}
           animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
         >
@@ -47,10 +46,16 @@ const Travel = ({ showSidebar, setShowSidebar, height, width }) => {
           </div>
         </motion.div>
         <img
+          src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/palm-tree-cow.png"
+          alt="wagyu under a palm tree relaxing"
+          className="palm-tree-cow"
+        />
+        {/* <img
           src={HawaiiBorder}
           alt="hawaiian themed border"
           className="hawaii-border"
-        />
+        /> */}
+        </div>
       </motion.div>
     );
   };

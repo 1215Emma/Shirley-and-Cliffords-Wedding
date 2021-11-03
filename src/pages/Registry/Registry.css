@@ -1,31 +1,69 @@
-
-.all-store-container {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  height: 100vh;
+.registry-wrapper {
+  margin: 0;
+  margin-bottom: 2em;
+}
+.inner-wrapper-registry {
+  position: relative;
+  z-index: 2;
+  border: black solid 2px;
+  border-top: none;
+  width: 90%;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 1em;
+  padding-bottom: 4em;
+}
+.inner-wrapper-registry::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: black;
+  width: 80%;
+  left: 10%;
+}
+.all-store-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.registry-img {
+  border-style: none;
+  width: 75%;
 }
 .button-container {
   background: transparent;
   position: relative;
-  width: 50%;
+  width: 100%;
   height: auto;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  cursor: pointer;
 }
 .registry-button {
   border-style: none;
-  border: white solid 1px;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   color: white;
   width: 100%;
   height: 4em;
 }
-.registry-button h2 {
-  margin: 0;
+
+.flower-border-registry {
+  position: absolute;
+  width: 100%;
+  bottom: -6rem;
+  overflow: hidden;
 }
-.store-container {
+/* .registry-button h2 {
+  margin: 0;
+} */
+/* .store-container {
   margin-top: 1em;
   position: relative;
   
@@ -40,15 +78,15 @@
   border-right: none;
   border-left: none;
   border-radius: 5%;
-}
-.store-container h3 {
+} */
+/* .store-container h3 {
   color: black;
   margin-left: 0.5em;
   margin-bottom: 20%;
   font-size: 1em;
-}
+} */
 
-.style-container1 {
+/* .style-container1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -58,8 +96,8 @@
   border-bottom: black solid 2px;
   border-top-left-radius: 10%;
   border-left: black solid 2px;
-}
-.style-container2 {
+} */
+/* .style-container2 {
   position: absolute;
   top: 0;
   right: 0;
@@ -68,4 +106,4 @@
   border-bottom: black solid 2px;
   border-top-right-radius: 10%;
   border-right: black solid 2px;
-}
+} */
