@@ -40,6 +40,8 @@ function App() {
   }, [windowDimensions])
 
   return (
+    <>
+      <img src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/hawaii-bg2.png" alt="" className="bg-img" style={{height: `${windowDimensions.height}px`, width: `${windowDimensions.width}px`}}/>
     <div
       className="app"
       style={{
@@ -101,7 +103,8 @@ function App() {
         </Switch>
       </Router>
       
-    </div>
+      </div>
+      </>
   );
 }
 
