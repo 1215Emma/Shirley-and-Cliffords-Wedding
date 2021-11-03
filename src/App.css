@@ -25,6 +25,7 @@ body {
 .app::before {
   content: "";
   background-image: url('https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/hawaii-bg2.png');
+  min-width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
