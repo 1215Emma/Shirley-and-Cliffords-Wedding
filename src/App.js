@@ -51,10 +51,6 @@ function App() {
         }}
       >
         <Router>
-          <Switch>
-            <Route exact path="/wedding-party">
-              <WeddingParty />
-            </Route>
             <Route exact path="/">
               <Home
                 showSidebar={showSidebar}
@@ -62,6 +58,10 @@ function App() {
                 height={windowDimensions.height}
                 width={windowDimensions.width}
               />
+            </Route>
+          <Switch>
+            <Route exact path="/wedding-party">
+              <WeddingParty />
             </Route>
             <Route exact path="/home">
               <Gallery />

@@ -140,7 +140,8 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
               ></button> */}
               <div className="sidebar-links">
                 <Link
-                  smooth to="/#home"
+                  smooth
+                  to="/#home"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
                   onClick={() => {
@@ -148,6 +149,17 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
                   }}
                 >
                   Home
+                </Link>
+                <Link
+                  smooth
+                  to="/#wedding-party"
+                  activeStyle={{ fontWeight: "bold" }}
+                  className="sidebar-buttons"
+                  onClick={() => {
+                    setShowSidebar(!showSidebar);
+                  }}
+                >
+                  Wedding Party
                 </Link>
                 <Link
                   smooth
