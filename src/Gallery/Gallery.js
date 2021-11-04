@@ -35,8 +35,8 @@ const Gallery = () => {
       ...allImages.filter((x) => x !== image),
       currentPrimaryImage,
     ];
-    setPrimaryImage(image);
     setAllImages(newImages);
+    setPrimaryImage(image);
   }
   const page = "main";
   const data = useFirebaseData(page);
@@ -75,10 +75,10 @@ const Gallery = () => {
             <h2 className="left-header">{data.header.header_tertiary}</h2>
           </div>
         </div>
-        <AnimateSharedLayout type="crossfade">
+        {/* <AnimateSharedLayout type="crossfade"> */}
           <div className="primary-container">
             <AnimatePresence>
-              <div className="primary-container-image">
+
                 <motion.img
                 key={primaryImage}
                 initial={{ opacity: 0, transition: {duration: 0.5} }}
@@ -88,8 +88,9 @@ const Gallery = () => {
                   alt=""
                   layoutId={`product-${primaryImage}`}
                 />
-                </div>
+          
             </AnimatePresence>
+          </div>
           <div className="product-gallery-nav">
             <div className="product-gallery">
               <AnimatePresence>
@@ -111,8 +112,7 @@ const Gallery = () => {
                 }}
               /> */}
               </div>
-          </div>
-        </AnimateSharedLayout>
+        {/* </AnimateSharedLayout> */}
       </motion.div>
     );
   } else {
