@@ -78,7 +78,7 @@ const Gallery = () => {
         <AnimateSharedLayout type="crossfade">
           <div className="primary-container">
             <AnimatePresence>
-              
+              <div className="primary-container-image">
                 <motion.img
                 key={primaryImage}
                 initial={{ opacity: 0, transition: {duration: 0.5} }}
@@ -88,7 +88,7 @@ const Gallery = () => {
                   alt=""
                   layoutId={`product-${primaryImage}`}
                 />
-              
+                </div>
             </AnimatePresence>
           <div className="product-gallery-nav">
             <div className="product-gallery">
