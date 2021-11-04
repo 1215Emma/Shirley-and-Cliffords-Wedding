@@ -43,13 +43,16 @@
 .header-secondary {
   position: relative;
   display: flex; 
-  justify-content: space-around;
+  justify-content: center;
   width: 20em;
 }
 .header-secondary h2 {
   font-size: 0.75rem;
 }
-
+.header-divider {
+  margin-left: 1em;
+  margin-right: 1em;
+}
 .primary-container {
   position: relative;
   z-index: 3;

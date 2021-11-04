@@ -71,7 +71,7 @@ const Gallery = () => {
           <h1 className="left-header">{data.header.header_primary}</h1>
           <div className="header-secondary">
             <h2 className="left-header">{data.header.header_secondary}</h2>
-            <h2> | </h2>
+            <h2 className="header-divider"> | </h2>
             <h2 className="left-header">{data.header.header_tertiary}</h2>
           </div>
         </div>
