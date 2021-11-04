@@ -22,12 +22,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 75%;
   margin-left: auto;
   margin-right: 1em;
   padding-bottom: 1.5em;
   padding-top: 1.5em;
   font-family: 'Julius Sans One', sans-serif;
+  z-index: 7;
 }
 .main-primary h1 {
   font-size: 1.5rem;
@@ -46,7 +47,7 @@
   width: 20em;
 }
 .header-secondary h2 {
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
 .primary-container {
