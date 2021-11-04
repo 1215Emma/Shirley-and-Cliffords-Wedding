@@ -13,6 +13,7 @@ const Faq = ({ showSidebar, setShowSidebar, height, width }) => {
   const faqRender = () => {
     return (
       <motion.div
+        id="faq"
         className="wrapper faq-wrapper"
         variants={showSidebar ? homeVariants : homeCloseVariants}
         initial={showSidebar ? "show" : "pushed"}
@@ -42,8 +43,10 @@ const Faq = ({ showSidebar, setShowSidebar, height, width }) => {
             alt="Clifford on his knee proposing to Shirley"
           /> */}
             <div className="primary-body faq-body">
-              <h2>{data.body.body_primary}</h2>
+              <h1>{data.body.body_primary}</h1>
               <h2>{data.body.body_secondary}</h2>
+              <h1>{data.body.body_tertiary}</h1>
+              <h2>{data.body.body_four}</h2>
             </div>
           </motion.div>
           <img
@@ -58,7 +61,7 @@ const Faq = ({ showSidebar, setShowSidebar, height, width }) => {
   if (data !== undefined) {
     return (
       <>
-        <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+        {/* <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} /> */}
         {faqRender()}
       </>
     );

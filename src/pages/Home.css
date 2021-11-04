@@ -88,7 +88,8 @@
   height: auto;
   margin-bottom: 0;
   margin-left: 1em;
-  font-family: mv boli;
+  margin-top: 1em;
+  font-family: 'Bitter', serif;
   color: rgb(47, 41, 41);
   font-size: 1.5em;
   text-align: center;
@@ -104,16 +105,21 @@
   flex-direction: column;
   align-items: center;
   z-index: 2;
-  font-family: Roboto,"Helvetica Neue",sans-serif;
+  font-family: 'Crimson Text', serif;
   color: rgb(47, 41, 41);
-  width: 85%;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1em;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  text-align: center;
 }
-
+.primary-body h1 {
+  font-size: 1.5em;
+}
 .primary-body h2 {
-  font-size: 20px;
+  font-size: 1em;
   padding: 0.5em;
   border-radius: 7px;
   white-space: pre-line;

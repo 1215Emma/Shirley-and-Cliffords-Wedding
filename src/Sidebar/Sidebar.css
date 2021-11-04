@@ -1,31 +1,65 @@
-.sidebar-button-container {
+.button-and-wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 4rem;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: auto;
+  z-index: 3;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+/* .sidebar-button-container {
   position: fixed;
   display: block;
-  margin-top: 0.5em;
-  margin-right: 0.5em;
-  z-index: 3;
+  z-index: 4;
   top: 0;
-  right: 0;
-  height: auto;
+  left: 0;
+  height: 100%;
   width: auto;
-}
-
-.hamburger {
-  margin-right: 0.5em;
-  right: 0;
-}
-.hamburger-icon {
-  font-size: 3em;
-}
-.sidebar-wrapper {
-  position: fixed;
-  background-color: #FFFDD0;
+} */
+.sidebar-button-container {
+  top: 0;
+  left: 0;
+  z-index: 3;
   height: 100%;
   width: 100%;
-  z-index: 2;
-  overflow: hidden;
+
+}
+.black-box {
+  position: absolute;
+  z-index: 1;
   top: 0;
-  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-right-radius: 10px;
+}
+.hamburger {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+.hamburger-icon {
+  font-size: 47px;
+  /* color: black; */
+  margin-left: 0.5em;
+  margin-top: 0.5rem;
+}
+.sidebar-wrapper {
+  position: relative;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  height: auto;
+  width: 100%;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
 }
 
 /* @media screen and (min-width: 550px) {
@@ -41,34 +75,38 @@
   }
 } */
 .sidebar-container {
-  display: flex;
-  flex-direction: column;
   height: 100%;
   width: auto;
 }
+
 .hamburger-vertical {
-  font-size: 32px;
+  font-size: 18px;
   background: transparent;
   border-style: none;
   align-self: flex-end;
-  margin-top: 1em;
   margin-right: 1em;
 }
 
 .sidebar-links {
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
-  margin-left: 5%;
+  justify-content: space-between;
+  margin-left: 0.75em;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  /* margin-left: 3.5em; */
 }
+
 .sidebar-buttons {
   text-decoration: none;
-  color: black;
+  color: white;
   background: none;
   border-style: none;
-  font-size: 36px;
-  padding-bottom: 0.5em;
-  padding-top: 0.5em;
+  font-size: 18px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  width: auto;
 }
 .sidebar-buttons:hover {
   color: rgb(241, 137, 153);

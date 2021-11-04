@@ -2,85 +2,119 @@ import React from "react";
 import "./Sidebar.css";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { NavLink } from "react-router-dom";
-import { GiHamburgerMenu } from 'react-icons/gi'
-
+import { HashLink as Link } from "react-router-hash-link";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Sidebar = ({ showSidebar, setShowSidebar }) => {
-  
-  
-  const containerVariants = 
-     {
-        hidden: {
-          opacity: 1,
-          x: "100%",
-        },
-        visible: {
-          opacity: 1,
-          x: "20%",
-          transition: {
-            type: "sween",
-            duration: 0.5,
-          },
-        },
-        exit: {
-          opacity: 0,
-          x: "100%",
-          transition: {
-            type: "sween",
-            duration: 0.5,
-          },
-        },
-      }
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+      x: "0",
+    },
+    visible: {
+      opacity: 1,
+      x: "0",
+      transition: {
+        type: "sween",
+        delay: 0.3,
+        duration: 0.5,
+      },
+    },
+    exit: {
+      opacity: 0,
+      x: 0,
+      transition: {
+        type: "sween",
+        duration: 0.3,
+      },
+    },
+  };
 
   const hamburgerVariants = {
     horizontal: {
       x: 0,
-      opacity: 0,
-      transition: {
-        duration: 0.5,
-      }
+      opacity: 1,
     },
     vertical: {
-      rotate: "45deg",
+      x: 0,
+
+      opacity: 1,
+  
       transition: {
         duration: 0.5,
       },
     },
     exit: {
       x: 0,
+
+      opacity: 1,
       transition: {
         duration: 1,
+      },
+    },
+  };
+  const blackBoxVariants = {
+    hide: {
+      y: "-100%",
+      opacity: 1,
+    },
+    slide: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    },
+    slideAway: {
+      y: "-100%",
+      opacity: 1,
+      transition: {
+        duration: 0.5
       }
     }
-  };
-
+  }
   return (
-    <>
+    <div className="button-and-wrapper">
       <div className="sidebar-button-container">
-        <AnimatePresence initial={false}>
-          {showSidebar ? (
-            <motion.div
-              className="hamburger"
-              variants={hamburgerVariants}
-              initial="horizontal"
-              animate="vertical"
-              exit="exit"
-            >
-              <GiHamburgerMenu
-                className="hamburger-icon"
+        <AnimatePresence initial={false} exitBeforeEnter>
+          {showSidebar && (
+            <>
+              {/* <motion.div
+                className="hamburger"
+                variants={hamburgerVariants}
+                initial="horizontal"
+                animate="vertical"
+                exit="exit"
+              >
+                <GiHamburgerMenu
+                  className="hamburger-icon"
+                  onClick={() => setShowSidebar(!showSidebar)}
+                />
+              </motion.div> */}
+              <motion.div
+                className="black-box"
+                variants={blackBoxVariants}
+                initial="hide"
+                animate="slide"
+                exit="slideAway"
                 onClick={() => setShowSidebar(!showSidebar)}
               />
-            </motion.div>
-          ) : (
-            <motion.div className="hamburger" whileHover={{ scale: 1.2 }}>
-              <GiHamburgerMenu
-                className="hamburger-icon"
-                onClick={() => setShowSidebar(!showSidebar)}
-              />
-            </motion.div>
+            </>
           )}
         </AnimatePresence>
+        <motion.div
+          className="hamburger"
+          // variants={hamburgerVariants}
+          // initial="horizontal"
+          // animate="vertical"
+          // exit="exit"
+        >
+          <GiHamburgerMenu
+            className="hamburger-icon"
+            onClick={() => setShowSidebar(!showSidebar)}
+            style={{ color: showSidebar ? "white" : "black" }}
+          />
+        </motion.div>
         {/* <HiDotsHorizontal /> */}
       </div>
       <AnimatePresence initial={false} exitBeforeEnter>
@@ -91,17 +125,22 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
             initial="hidden"
             animate="visible"
             exit="exit"
+            // style={{
+            //   backgroundColor: showSidebar
+            //     ? "rgba(0, 0, 0, 0.5)"
+            //     : "rgba(0, 0, 0, 0)",
+            // }}
           >
             <div className="sidebar-container">
-              <button
+              {/* <button
                 className="hamburger-vertical"
                 onClick={() => {
                   setShowSidebar(!showSidebar);
                 }}
-              ></button>
+              ></button> */}
               <div className="sidebar-links">
-                <NavLink
-                  to="/"
+                <Link
+                  smooth to="/#home"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
                   onClick={() => {
@@ -109,9 +148,10 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
                   }}
                 >
                   Home
-                </NavLink>
-                <NavLink
-                  to="/travel"
+                </Link>
+                <Link
+                  smooth
+                  to="/#travel"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
                   onClick={() => {
@@ -119,9 +159,10 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
                   }}
                 >
                   Travel
-                </NavLink>
-                <NavLink
-                  to="/rsvp"
+                </Link>
+                <Link
+                  smooth
+                  to="/#rsvp"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
                   onClick={() => {
@@ -129,19 +170,21 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
                   }}
                 >
                   RSVP
-                </NavLink>
-                <NavLink
-                  to="/faq"
+                </Link>
+                <Link
+                  smooth
+                  to="/#faq"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
                 >
-                  Faq
-                </NavLink>
-                <NavLink
-                  to="/registry"
+                  FAQ
+                </Link>
+                <Link
+                  smooth
+                  to="/#registry"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
                   onClick={() => {
@@ -149,32 +192,33 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
                   }}
                 >
                   Registry
-                </NavLink>
-                {/* <NavLink
+                </Link>
+                {/* <Link
                   to="/gallery-player"
                   activeStyle={{ fontWeight: "bold" }}
                   className="sidebar-buttons"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
-                >
+                  >
                   Gallery Player
-                </NavLink> */}
-                <NavLink
+                </Link> */}
+                <Link
+                  smooth
                   className="sidebar-buttons"
-                  to="/admin"
+                  to="admin"
                   onClick={() => {
                     setShowSidebar(!showSidebar);
                   }}
                 >
                   Admin
-                </NavLink>
+                </Link>
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 };
 

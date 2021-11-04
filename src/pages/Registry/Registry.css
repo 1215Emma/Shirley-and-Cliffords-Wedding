@@ -37,10 +37,10 @@
   border-style: none;
   width: 75%;
 }
-.button-container {
+.store-container {
   background: transparent;
   position: relative;
-  width: 100%;
+  width: 50%;
   height: auto;
   margin-bottom: 1em;
   margin-top: 1em;

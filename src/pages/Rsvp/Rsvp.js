@@ -16,6 +16,7 @@ const Rsvp = ({ showSidebar, setShowSidebar, height, width }) => {
   const rsvpRender = () => {
     return (
       <motion.div
+        id="rsvp"
         className="wrapper rsvp-wrapper"
         variants={showSidebar ? homeVariants : homeCloseVariants}
         initial={showSidebar ? "show" : "pushed"}
@@ -79,7 +80,7 @@ const Rsvp = ({ showSidebar, setShowSidebar, height, width }) => {
   if (data !== undefined) {
     return (
       <>
-        <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+        {/* <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} /> */}
         {rsvpRender()}
       </>
     );

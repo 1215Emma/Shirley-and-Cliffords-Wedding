@@ -17,6 +17,7 @@ const Registry = ({ showSidebar, setShowSidebar, height, width }) => {
   const registryRender = (numOfStores) => {
     return (
       <motion.div
+        id="registry"
         className="registry-wrapper"
         variants={showSidebar ? homeVariants : homeCloseVariants}
         initial={showSidebar ? "show" : "pushed"}
@@ -36,11 +37,9 @@ const Registry = ({ showSidebar, setShowSidebar, height, width }) => {
           >
             <div className="all-store-container">
               {numOfStores.map((res) => {
-                console.log(res, "RESSSSPDOS");
                 return (
                   <div className="store-container" key={res.store}>
-                    {/* <h3>{res.description}</h3> */}
-                    <div className="button-container">
+                    
                       <button type="submit" className={`${page}-button`}>
                         <img
                           src={res.img_url}
@@ -48,7 +47,7 @@ const Registry = ({ showSidebar, setShowSidebar, height, width }) => {
                           className={`registry-img ${res.store}`}
                         />
                       </button>
-                    </div>
+                  
                   </div>
                 );
               })}
@@ -62,7 +61,7 @@ const Registry = ({ showSidebar, setShowSidebar, height, width }) => {
     const numOfStores = Object.values(data.body)
     return (
       <>
-        <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+        {/* <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} /> */}
         {registryRender(numOfStores)}
       </>
     );

@@ -13,7 +13,7 @@ const MusicPlayerGallery = () => {
   const paginate = (newDirection) => {
     setPage([page + newDirection, newDirection]);
   };
-
+ 
   return (
     <>
       <Sidebar />

@@ -45,6 +45,7 @@ const Admin = ({ showSidebar, setShowSidebar }) => {
   const adminRender = () => {
     return (
       <motion.div
+        id="admin"
         className="main-container"
         variants={showSidebar ? homeVariants : homeCloseVariants}
         initial={showSidebar ? "show" : "pushed"}

@@ -7,7 +7,7 @@ const RsvpForm = ({ data, setIsFormSubmitted }) => {
   if (data !== undefined) {
 
     const inputVal = data.body.form_input_value
-    console.log(inputVal)
+
   return (
     <div className="rsvp-form-container">
       <Formik
@@ -118,7 +118,7 @@ const RsvpForm = ({ data, setIsFormSubmitted }) => {
 
               <ErrorMessage name="guests" component="div" />
             </div>
-            <div className="form-group food">
+            {/* <div className="form-group food">
               <label>{data.body.form_food_restrictions}</label>
               <Field
                 type="text"
@@ -141,7 +141,7 @@ const RsvpForm = ({ data, setIsFormSubmitted }) => {
               />
 
               <ErrorMessage name="questions" component="div" />
-            </div>
+            </div> */}
             <button type="submit" disabled={isSubmitting}>
               Submit
             </button>
