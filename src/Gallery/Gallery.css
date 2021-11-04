@@ -12,6 +12,7 @@
   left: 0px;
   z-index: 2;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .main-primary {
@@ -155,7 +156,7 @@
   width: auto;
   display: flex;
   flex-direction: column;
-  overflow-x: auto;
+  overflow: hidden;
 
   /* border: white solid 2px; */
 }
