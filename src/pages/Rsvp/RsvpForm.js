@@ -80,7 +80,7 @@ const RsvpForm = ({ data, setIsFormSubmitted }) => {
               <ErrorMessage name="email" component="div" />
             </div>
             <div className="form-group attending-status-group">
-              <div className="form-radio-group" />
+             
               <label>{data.body.form_attending_status}</label>
               <div className="form-radio-button-group">
               <div className="form-attending-status-group-individual">
@@ -118,32 +118,8 @@ const RsvpForm = ({ data, setIsFormSubmitted }) => {
 
               <ErrorMessage name="guests" component="div" />
             </div>
-            {/* <div className="form-group food">
-              <label>{data.body.form_food_restrictions}</label>
-              <Field
-                type="text"
-                name="food_restrictions"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.food_restrictions}
-              />
-
-              <ErrorMessage name="food_restrictions" component="div" />
-            </div>
-            <div className="form-group questions">
-              <label>{data.body.form_questions}</label>
-              <Field
-                type="text"
-                name="questions"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.questions}
-              />
-
-              <ErrorMessage name="questions" component="div" />
-            </div> */}
             <button type="submit" disabled={isSubmitting}>
-              Submit
+              SUBMIT RSVP
             </button>
           </Form>
         )}

@@ -29,14 +29,15 @@ export const useFirebaseData = (page) => {
 }
 
 // updates firebase data based on the section provided
-export const updateFirebaseData = (endpoint, page, values) => {
-  console.log(values)
+export const updateFirebaseData = (page, keysOfData, section, values, setIsEditing) => {
+
   set(
-    ref(database, `${endpoint}/${page}`),
+    ref(database, `${page}/${keysOfData}/${section}`),
     values
   )
     .then(() => {
       console.log("updated successfully");
+      setIsEditing(false)
     })
     .catch((error) => {
       console.log("didn't update:" + error);

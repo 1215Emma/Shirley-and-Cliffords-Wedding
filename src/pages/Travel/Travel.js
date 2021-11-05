@@ -2,14 +2,51 @@ import React from "react";
 import "./Travel.css";
 import { useFirebaseData } from "../useFirebaseData";
 import { motion } from "framer-motion";
-import Sidebar from "../../Sidebar/Sidebar";
 import { homeVariants, homeCloseVariants } from "../Variants/PageVariants";
-import FlowerBorder from '../images/flower-border-vertical.png'
+import FlowerBorder from "../images/flower-border-vertical.png";
 
 const Travel = ({ showSidebar, setShowSidebar, height, width }) => {
   const page = "travel";
   const data = useFirebaseData(page);
-
+  const resorts = () => {
+    const resortData = Object.entries(data.body);
+    return resortData.map((resort) => {
+      return (
+        <div key={resort[0]}>
+          <div className={`resort-header`}>
+            {resort[1].resort_image !== undefined && (
+              <img
+                src={resort[1].resort_image}
+                alt="Sheraton Maui Resort & Spa"
+                className="resort"
+              />
+            )}
+            <h1>{resort[1].resort}</h1>
+          </div>
+          <div className="primary-body travel-body">
+            <h2>{resort[1].info_1}</h2>
+            <h2>{resort[1].info_2}</h2>
+            {resort[1].resort_website !== undefined && (
+              <button type="button" className="resort-btn">
+                <motion.a
+                  whileHover={{ scale: 3 }}
+                  whileTap={{ scale: 0.8 }}
+                  style={{ x: 100 }}
+                  href={resort[1].resort_website}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="resort-link"
+                >
+                  <h1>{`Visit website`}</h1>
+                </motion.a>
+                
+              </button>
+            )}
+          </div>
+        </div>
+      );
+    });
+  };
   const travelRender = () => {
     return (
       <motion.div
@@ -22,47 +59,20 @@ const Travel = ({ showSidebar, setShowSidebar, height, width }) => {
       >
         <img src={FlowerBorder} alt="" className="flower-border" />
         <div className="inner inner-wrapper-travel">
-          <div className="header-banner-container">
+
             <div className="primary-header travel-primary">
               <h1>{data.header.header_primary}</h1>
             </div>
-          </div>
+        
           <motion.div
             className="section-container travel-container"
             initial={{ x: 0, opacity: 0 }}
             animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
           >
-            <div className="sheraton-container">
-              <img
-                src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/Sharaton-Maui.jpg"
-                alt="Sheraton Maui Resort & Spa"
-                className="sheraton"
-              />
-              <h1>SHERATON MAUI RESORT & SPA</h1>
-            </div>
-            {/* <img
-            id={page}
-            className={`img-${page}`}
-            src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-91.jpg"
-            alt="Clifford on his knee proposing to Shirley"
-          /> */}
-            <div className="primary-body travel-body">
-              <h2>{data.body.body_primary}</h2>
-              <h2>{data.body.body_secondary}</h2>
-              <button type="button" className="sheraton-btn">
-                <a
-                  href="https://www.marriott.com/hotels/hotel-information/hnmsi-sheraton-maui-resort-and-spa/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="sheraton-link"
-                >
-                  Sheraton Maui Website
-                </a>
-              </button>
-              <h1>{data.body.body_tertiary}</h1>
-              <h2>{data.body.body_four}</h2>
-              <h2>{data.body.body_five}</h2>
-            </div>
+
+
+               {resorts()}
+           
           </motion.div>
           <img
             src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/palm-tree-cow.png"

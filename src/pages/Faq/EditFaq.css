@@ -1,0 +1,46 @@
+.edit-faq-wrapper {
+  margin-bottom: 5em;
+}
+
+.inner-wrapper-edit-faq {
+  position: relative;
+  margin-top: 5em;
+  border: black solid 2px;
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1em;
+}
+
+
+.surfing-cow {
+  position: relative;
+  order: 2;
+  right: 0;
+  bottom: 0;
+  margin-top: auto;
+  width: 40%;
+}
+
+.down-arrow-editing {
+  font-size: 2em;
+}
+
+.edit-faq-question {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.edit-faq-answer {
+  margin-bottom: 0;
+}
+
+.question-seperation {
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}

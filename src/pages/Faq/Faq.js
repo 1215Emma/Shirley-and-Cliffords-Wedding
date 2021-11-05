@@ -2,14 +2,30 @@ import React from "react";
 import "./Faq.css";
 import { useFirebaseData } from "../useFirebaseData";
 import { motion } from "framer-motion";
-import Sidebar from "../../Sidebar/Sidebar";
 import { homeVariants, homeCloseVariants } from "../Variants/PageVariants";
-import HeaderBannerBg from "../images/header-banner.png";
-import HawaiiBorder from "../images/hawaii-border2.png";
-import SurfingCow from '../images/surfing-cow.png'
+
 const Faq = ({ showSidebar, setShowSidebar, height, width }) => {
   const page = "faq";
   const data = useFirebaseData(page);
+  const questions = () => {
+    const questionData = Object.entries(data.body);
+    return questionData.map((question) => {
+      return (
+        <div key={question[0]}>
+          <div className="primary-body faq-body">
+            <h1 className="edit-faq-question">{question[1].question}</h1>
+            <h2
+              className="edit-faq-answer"
+              style={{ paddingBottom: 0, paddingTop: 0 }}
+            >
+              {question[1].answer}
+            </h2>
+          </div>
+          <div className="question-seperation" />
+        </div>
+      );
+    });
+  };
   const faqRender = () => {
     return (
       <motion.div
@@ -36,17 +52,8 @@ const Faq = ({ showSidebar, setShowSidebar, height, width }) => {
             initial={{ x: 0, opacity: 0 }}
             animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
           >
-            {/* <img
-            id={page}
-            className={`img-${page}`}
-            src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-132.jpg"
-            alt="Clifford on his knee proposing to Shirley"
-          /> */}
             <div className="primary-body faq-body">
-              <h1>{data.body.body_primary}</h1>
-              <h2>{data.body.body_secondary}</h2>
-              <h1>{data.body.body_tertiary}</h1>
-              <h2>{data.body.body_four}</h2>
+              {questions()}
             </div>
           </motion.div>
           <img
@@ -61,7 +68,6 @@ const Faq = ({ showSidebar, setShowSidebar, height, width }) => {
   if (data !== undefined) {
     return (
       <>
-        {/* <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} /> */}
         {faqRender()}
       </>
     );

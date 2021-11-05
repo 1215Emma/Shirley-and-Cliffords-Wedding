@@ -23,7 +23,7 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
     exit: {
       opacity: 0,
       x: 0,
-      transition: {
+      transition: { 
         type: "sween",
         duration: 0.3,
       },

@@ -4,11 +4,8 @@ import RsvpForm from "./RsvpForm";
 import { useFirebaseData } from "../useFirebaseData";
 import { motion } from "framer-motion";
 import Loader from "../../Utilities/Loader";
-import Sidebar from "../../Sidebar/Sidebar";
 import { homeVariants, homeCloseVariants } from "../Variants/PageVariants";
-import HeaderBannerBg from "../images/header-banner.png";
-import HawaiiBorder from "../images/hawaii-border2.png";
-import UmbrellaCow from '../images/umbrella-cow.png'
+
 const Rsvp = ({ showSidebar, setShowSidebar, height, width }) => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const page = "rsvp"
@@ -36,12 +33,6 @@ const Rsvp = ({ showSidebar, setShowSidebar, height, width }) => {
           >
             {!isFormSubmitted ? (
               <>
-                {/* <img
-                id={page}
-                src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-198.jpg"
-                className={`img-${page}`}
-                alt="Shirley and Clifford kissing between streets"
-              /> */}
                 <div className="primary-body rsvp-body">
                   <h2>{data.body.form_header}</h2>
                 </div>
@@ -63,11 +54,6 @@ const Rsvp = ({ showSidebar, setShowSidebar, height, width }) => {
               </>
             )}
           </motion.div>
-          {/* <img
-          src={HawaiiBorder}
-          alt="hawaiian themed border"
-          className="hawaii-border"
-        /> */}
           <img
             src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/umbrella-cow.png"
             alt="Wagyu relaxing under the sun"
@@ -80,7 +66,6 @@ const Rsvp = ({ showSidebar, setShowSidebar, height, width }) => {
   if (data !== undefined) {
     return (
       <>
-        {/* <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} /> */}
         {rsvpRender()}
       </>
     );

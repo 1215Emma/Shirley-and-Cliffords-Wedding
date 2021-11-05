@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Gallery.css";
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import imageUrls from "../images/imageUrls.json";
-import { BsChevronCompactRight, BsChevronCompactLeft } from "react-icons/bs";
+// import { BsChevronCompactRight, BsChevronCompactLeft } from "react-icons/bs";
 import { useFirebaseData } from "../pages/useFirebaseData";
 
 const Images = ({ image, onExpand }) => {

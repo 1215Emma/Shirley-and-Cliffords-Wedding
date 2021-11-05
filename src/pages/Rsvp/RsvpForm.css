@@ -27,16 +27,17 @@
 }
 
 .rsvp-form label {
-  margin-top: 0.5em;
+  margin-bottom: 0.25em;
   color: black;
   font-size: 18px;
-  margin-bottom: 0.25em;
+  
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 0.5em;
 }
 
 .rsvp-form button {
@@ -44,11 +45,10 @@
   margin-top: 1em;
   border-style: none;
   height: 4em;
-  width: 12em;
+  width: 100%;
   margin-bottom: 2em;
-  background: rgba(0, 0, 0, 0.4);
-  border: white solid 2px;
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: white solid 1px;
   cursor: pointer;
 }
 
@@ -80,9 +80,11 @@
 .form-radio-button-group {
   display: flex;
 }
-.attending-status-group label {
-  margin-top: 0;
-  margin-bottom: 0;
+.attending-status-group {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
 }
 
 .form-attending-status-group-individual input{
@@ -95,32 +97,6 @@
   align-items: center;
   justify-content: space-between;
   width: 3em;
-  margin-top: 0.5em;
+
   margin-right: 3em;
 }
-
-/* .guests {
-  margin-left:  10em;
-} */
-/* .guests label {
-  margin-left: 2em;
-} */
-/* .guests input {
-  width: 75%;
-} */
-
-/* .food {
-  margin-left: 10em;
-} */
-
-/* .food input {
-  width: 75%;
-} */
-
-/* .questions {
-  margin-left: 10em;
-} */
-
-/* .questions input {
-  width: 75%;
-} */

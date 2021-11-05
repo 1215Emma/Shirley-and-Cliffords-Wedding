@@ -1,40 +1,47 @@
-.edit-content-container {
+.form-editable-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   overflow-y: auto;
 }
-.edit-form {
+.form-editable-section {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content:flex-start;
   align-items: center;
   width: 100%;
 }
-.edit-form input {
-  padding-left: 1em;
-  font-size: 16px;
-  
-}
-.edit-form-input {
+
+.form-editable-input {
+  position: relative;
   background: rgba(0, 0, 0, 0.6);
   border: none;
-  height: 5em;
   width: 80%;
-  margin-bottom: 0.75em;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
   border: white solid 1px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
   }
 
-.edit-form-button {
+.form-editable-button {
+  position: absolute;
+  right: 0;
   color: white;
-  margin-top: 1em;
   border-style: none;
-  height: 4em;
-  width: 10em;
-  margin-bottom: 2em;
+  height: 100%;
+  width: auto;
+  margin: 0;
+  padding: 0;
   background: rgba(0, 0, 0, 0.4);
-  border: white solid 2px;
-  border-radius: 5%;
+  border: white solid 1px;
+  border-radius: 20px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  }
+
+  .form-checkmark {
+    font-size: 1.5rem;
   }

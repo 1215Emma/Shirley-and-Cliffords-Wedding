@@ -2,14 +2,8 @@ import React from "react";
 import "./Registry.css";
 import { useFirebaseData } from "../useFirebaseData";
 import { motion } from "framer-motion";
-import Sidebar from "../../Sidebar/Sidebar";
 import { homeVariants, homeCloseVariants } from "../Variants/PageVariants";
-import HeaderBannerBg from "../images/header-banner.png";
-import HawaiiBorder from "../images/hawaii-border2.png";
-import Pineapple from '../images/pineapple.jpg'
-import SevenLionsFooter from '../images/footer.png'
-import CrateAndBarrel from '../images/CrateAndBarrel.png'
-import FlowerBorder from "../images/flower-border.png";
+
 
 const Registry = ({ showSidebar, setShowSidebar, height, width }) => {
   const page = "registry"
