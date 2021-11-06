@@ -65,7 +65,7 @@
 }
 
 .hero-image {
-  width: auto;
+  height: auto;
   margin-right: 0.5em;
   border: white solid 3px;
 }
@@ -151,7 +151,6 @@
   position: relative;
   left: 0;
   top: 0;
-  width: auto;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
