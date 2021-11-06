@@ -10,27 +10,20 @@
 }
 .inner-wrapper-edit-travel {
   position: relative;
-  margin-top: 5em;
+  margin-top: 6em;
   border: black solid 2px;
-  border-bottom: none;
   width: 90%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-}
-.palm-tree-cow {
-  position: relative;
-  order: 2;
-  left: 0;
-  bottom: 0;
-  margin-top: auto;
-  width: 30%;
+  margin-bottom: 2em;
+  text-align: center;
 }
 
 .edit-flower-border {
   position: absolute;
   left: 1rem;
-  margin-top: 1em;
+  top: -5%;
   /* margin-top: 0.5em; */
   height: 25%;
   z-index: 1;
@@ -52,11 +45,13 @@
   width: 80%;
   margin-top: 1em;
   border: white solid 3px;
+  max-width: 75vw;
 }
 
 .resort-header h1 {
   font-size: 20px;
-  font-size: 5vw;
+  width: 80%;
+  text-align: center;
 }
 .resort-btn {
   border-style: none;
@@ -66,18 +61,14 @@
   border: rgba(255, 255, 255, 0.75) solid 3px;
   border-left: none;
   border-right: none;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
 }
 .resort-link {
   text-decoration: none;
   font-size: 20px;
-  font-size: 5vw;
 }
 .resort-link h1 {
   text-decoration: none;
   font-size: 20px;
-  font-size: 5vw;
 }
 
 .down-arrow-editing {

@@ -56,23 +56,20 @@ const Travel = ({ showSidebar, setShowSidebar, height, width }) => {
         // initial={showSidebar ? "show" : "pushed"}
         // animate={showSidebar ? "push" : "closed"}
         style={{ height: "auto", width: `${width}px` }}
-      >
-        <img src={FlowerBorder} alt="" className="flower-border" />
-        <div className="inner inner-wrapper-travel">
-
-            <div className="primary-header travel-primary">
-              <h1>{data.header.header_primary}</h1>
-            </div>
+        >
         
+        
+        <div className="inner inner-wrapper-travel">
+          <div className="primary-header travel-primary">
+            <h1>{data.header.header_primary}</h1>
+          </div>
+
           <motion.div
             className="section-container travel-container"
             initial={{ x: 0, opacity: 0 }}
             animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
           >
-
-
-               {resorts()}
-           
+            {resorts()}
           </motion.div>
           <img
             src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/palm-tree-cow.png"

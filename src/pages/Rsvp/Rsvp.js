@@ -21,11 +21,9 @@ const Rsvp = ({ showSidebar, setShowSidebar, height, width }) => {
         style={{ height: `auto`, width: `${width}px` }}
       >
         <div className="inner inner-wrapper-rsvp">
-          <div className="header-banner-container">
             <div className="primary-header rsvp-primary">
               <h1>{data.header.header_primary}</h1>
             </div>
-          </div>
           <motion.div
             className="section-container"
             initial={{ x: 0, opacity: 0 }}

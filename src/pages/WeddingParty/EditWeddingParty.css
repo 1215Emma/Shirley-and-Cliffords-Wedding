@@ -1,4 +1,4 @@
-.edit-rsvp-wrapper {
+.edit-wedding-party-wrapper {
   position: relative;
   padding: 0px;
   overflow-y: scroll;
@@ -7,25 +7,20 @@
   max-height: 100%;
   margin-bottom: 0;
   display: block;
+  top: 10%;
 }
 
-.inner-wrapper-edit-rsvp {
+.inner-wrapper-edit-wedding-party {
   position: relative;
-  margin-top: 6em;
+  margin-top: 2em;
   border: black solid 2px;
   width: 90%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2em;
-}
-
-.form-submitted {
-  margin-top: 10%;
-  border-radius: 15px;
-}
-.form-submitted h2, h3 {
-  font-size: 28px;
+  min-height: 60vh;
+  text-align: center;
 }
 
 .down-arrow-editing {

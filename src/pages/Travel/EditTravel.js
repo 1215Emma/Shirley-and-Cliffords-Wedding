@@ -192,7 +192,7 @@ const EditTravel = ({
           sectionClicked={sectionClicked}
           setSectionClicked={setSectionClicked}
         />
-        <img src={FlowerBorder} alt="" className="edit-flower-border" />
+        
         <div className="inner inner-wrapper-edit-travel">
           <div className="primary-header travel-primary">
             <h1>{data.header.header_primary}</h1>

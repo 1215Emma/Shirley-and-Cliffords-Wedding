@@ -23,7 +23,7 @@ const Home = ({ showSidebar, setShowSidebar, height, width }) => {
         initial={showSidebar ? "show" : "pushed"}
         animate={showSidebar ? "push" : "closed"}
       >
-        <Gallery />
+        <Gallery height={height} width={width} />
         <WeddingParty />
         <Travel
           showSidebar={showSidebar}

@@ -64,7 +64,7 @@ const AdminSidebar = ({
             ) : (
               <Link
                 key={section}
-                to={`/admin/edit/${section}`}
+                to={`/admin/edit/wedding-party`}
                 activestyle={{ fontWeight: "bold" }}
                 className="sidebar-buttons"
                 onClick={() => {
@@ -140,7 +140,7 @@ const AdminSidebar = ({
     exit: {
       y: 0,
       opacity: 0,
-      transition: {
+      transition: { 
         duration: 0.5,
       },
     },

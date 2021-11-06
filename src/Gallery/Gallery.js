@@ -15,12 +15,12 @@ const Images = ({ image, onExpand }) => {
           onExpand(image);
         }}
         className={`related-product-image ${image}`}
-        layoutId={`product-${image}`}
+        
       ></motion.img>
     </div>
   );
 };
-const Gallery = () => {
+const Gallery = ({ height, width }) => {
   const [primaryImage, setPrimaryImage] = useState("15");
   // const [allImages, setAllImages] = useState(
   //   Object.keys(imageUrls).filter((primary) => primary !== primaryImage)
@@ -46,7 +46,7 @@ const Gallery = () => {
     timeoutRef.current = setTimeout(() => {
       console.log("timeout");
       setAsPrimary(allImages[0]);
-    }, 30000);
+    }, 10000);
     return () => {
       resetTimeout();
     };
@@ -57,7 +57,7 @@ const Gallery = () => {
       clearTimeout(timeoutRef.current);
     }
   };
-
+  
   if (data !== undefined) {
     return (
       <motion.div
@@ -68,51 +68,43 @@ const Gallery = () => {
         // exit={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
       >
         <div className="main-primary">
-          <h1 className="left-header">{data.header.header_primary}</h1>
+          <h1 className="left-header">{data.header.welcome.header_primary}</h1>
           <div className="header-secondary">
-            <h2 className="left-header">{data.header.header_secondary}</h2>
+            <h2 className="left-header">
+              {data.header.welcome.header_secondary}
+            </h2>
             <h2 className="header-divider"> | </h2>
-            <h2 className="left-header">{data.header.header_tertiary}</h2>
+            <h2 className="left-header">
+              {data.header.welcome.header_tertiary}
+            </h2>
           </div>
         </div>
         {/* <AnimateSharedLayout type="crossfade"> */}
-          <div className="primary-container">
-            <AnimatePresence>
-
-                <motion.img
+        <div className="primary-container">
+          <div className="hero-image" style={{ height: `${height / 2}px` }}>
+            <AnimatePresence initial={false} exitBeforeEnter>
+              <motion.img
                 key={primaryImage}
-                initial={{ opacity: 0, transition: {duration: 0.5} }}
-                animate={{opacity: 1, transition: { duration: 0.5}}}
-                  className="primary-product-image"
-                  src={`https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-${primaryImage}.jpg`}
-                  alt=""
-                  layoutId={`product-${primaryImage}`}
-                />
-          
+                initial={{ opacity: 0, y: 0, transition: { duration: 0.5 } }}
+                animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+                className="primary-product-image"
+                src={`https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/compressed-images-shirley/Shirley_Clifford_Proposal-${primaryImage}.jpg`}
+                alt=""
+              />
             </AnimatePresence>
           </div>
-          <div className="product-gallery-nav">
-            <div className="product-gallery">
-              <AnimatePresence>
-                {allImages.map((image) => (
-                  <Images image={image} key={image} onExpand={setAsPrimary} />
-                  ))}
-              </AnimatePresence>
-            </div>
-            {/* <BsChevronCompactLeft
-                className="carousel-arrow arrow-left"
-                onClick={() => {
-                  setAsPrimary(allImages[allImages.length - 1]);
-                }}
-                />
-                <BsChevronCompactRight
-                className="carousel-arrow arrow-right"
-                onClick={() => {
-                  setAsPrimary(allImages[0]);
-                }}
-              /> */}
-              </div>
-        {/* </AnimateSharedLayout> */}
+
+          <div
+            className="product-gallery"
+            style={{ height: `${height / 2}px` }}
+          >
+            <AnimatePresence>
+              {allImages.map((image) => (
+                <Images image={image} key={image} onExpand={setAsPrimary} />
+              ))}
+            </AnimatePresence>
+          </div>
+        </div>
       </motion.div>
     );
   } else {

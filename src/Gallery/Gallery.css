@@ -22,13 +22,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 75%;
-  margin-left: auto;
-  margin-right: 1em;
+  width: 100%;
   padding-bottom: 1.5em;
   padding-top: 1.5em;
   font-family: 'Julius Sans One', sans-serif;
   z-index: 7;
+  margin-left: 1em;
 }
 .main-primary h1 {
   font-size: 1.5rem;
@@ -55,35 +54,27 @@
 }
 .primary-container {
   position: relative;
+  display: flex;
+  justify-content: center;
   z-index: 3;
   height: 100%;
-  width: 70%;
+  width: 90%;
   overflow: hidden;
-  /* margin-right: auto; */
-  margin-left: 1em;
-  /* border: white solid 3px; */
-}
-.primary-container-image {
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  margin-left: auto;
   margin-right: auto;
 }
-/* .primary-img-container {
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-} */
-.primary-product-image {
+
+.hero-image {
+  width: auto;
+  margin-right: 0.5em;
   border: white solid 3px;
-  margin-right: 10rem;
+}
+.primary-product-image {
   overflow: hidden;
   position: relative;
-  width: 95%;
+  width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 5px;
 
   /* animation: zoom-out 30s ease-out infinite; */
@@ -147,19 +138,7 @@
   overflow-x: auto;
 } */
 
-.product-gallery-nav {
-  position: absolute;
-  top: 9.25rem;
-  right: 0;
-  z-index: 4;
-  height: 71%;
-  width: auto;
-  /* border: white solid 2px; */
-  margin-top: 3px;
-  overflow-y: scroll;
-  margin-left: auto;
-  margin-right: 1em;
-}
+
 .carousel-arrow {
   color: white;
   font-size: 56px;
@@ -172,22 +151,25 @@
   position: relative;
   left: 0;
   top: 0;
-  height: 33em;
   width: auto;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
-
-  /* border: white solid 2px; */
+  overflow-y: auto;
+  margin-left: 0.5em;
+  border: white solid 3px;
+  overflow-x: hidden;
 }
-
+.product-gallery::-webkit-scrollbar {
+    width: 0px;
+ 
+}
 .gallery-img-container {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  /* width: 100%; */
+  /* margin-bottom: 0.25em; */
 }
 .related-product-image {
-  height: 100%;
+  
   width: 5em;
   object-fit: contain;
-  border-radius: 5px;
 }

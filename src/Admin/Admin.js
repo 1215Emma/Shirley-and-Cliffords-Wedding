@@ -34,7 +34,7 @@ const Admin = ({ showMenu, setShowMenu, sectionClicked, setSectionClicked }) => 
               data={data}
             />
           </div>
-              <h1 style={{ marginTop: "90%", textAlign: "center" }}> #SoInLoveWithCho </h1>
+              <h1 style={{ marginTop: "25%", textAlign: "center" }}> #SoInLoveWithCho </h1>
               </>
         )}
       </div>

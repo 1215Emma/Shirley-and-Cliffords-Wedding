@@ -24,10 +24,24 @@
   flex-direction: column;
 }
 .inner {
-   background-color: rgba(78, 76, 76, 0.3);
-   overflow-x: hidden;
+  background-color: rgba(78, 76, 76, 0.3);
+  overflow-x: hidden;
+   
 }
-
+ /* @media screen and (min-width: 550px) {
+   .inner {
+     width: 75vw;
+   }
+  .flower-border-left {
+  position: absolute;
+  left: 12.5vw;
+  margin-top: -1.5rem;
+  height: 20%;
+  z-index: 1;
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+ } */
 .header-banner-bg {
   width: 100%;
   opacity: 0;

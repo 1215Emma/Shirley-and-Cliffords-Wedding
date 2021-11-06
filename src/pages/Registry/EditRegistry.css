@@ -1,0 +1,50 @@
+.edit-registry-wrapper {
+  position: relative;
+  padding: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 0;
+  display: block;
+  top: 10%;
+}
+.inner-wrapper-edit-registry {
+  position: relative;
+  margin-top: 2em;
+  border: black solid 2px;
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  min-height: 60vh;
+}
+
+.down-arrow-editing {
+  font-size: 2em;
+}
+.edit-all-store-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edit-store-container {
+  background: transparent;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  cursor: pointer;
+  align-items: center;
+}

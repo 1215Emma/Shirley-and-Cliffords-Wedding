@@ -13,6 +13,9 @@ import Gallery from "./Gallery/Gallery";
 import EditTravel from "./pages/Travel/EditTravel";
 import EditRsvp from "./pages/Rsvp/EditRsvp";
 import EditFaq from "./pages/Faq/EditFaq";
+import EditGallery from "./Gallery/EditGallery"
+import EditRegistry from "./pages/Registry/EditRegistry";
+import EditWeddingParty from "./pages/WeddingParty/EditWeddingParty";
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -67,7 +70,10 @@ function App() {
               <WeddingParty />
             </Route>
             <Route exact path="/home">
-              <Gallery />
+              <Gallery
+                height={windowDimensions.height}
+                width={windowDimensions.width}
+              />
             </Route>
             <Route exact path="/admin">
               <Admin
@@ -75,6 +81,16 @@ function App() {
                 setShowMenu={setShowMenu}
                 sectionClicked={sectionClicked}
                 setSectionClicked={setSectionClicked}
+              />
+            </Route>
+            <Route path="/admin/edit/main">
+              <EditGallery
+                showMenu={showMenu}
+                setShowMenu={setShowMenu}
+                sectionClicked={sectionClicked}
+                setSectionClicked={setSectionClicked}
+                height={windowDimensions.height}
+                width={windowDimensions.width}
               />
             </Route>
             <Route path="/admin/edit/travel">
@@ -108,7 +124,24 @@ function App() {
               />
             </Route>
             <Route path="/admin/edit/registry">
-              <Admin />
+              <EditRegistry
+                showMenu={showMenu}
+                setShowMenu={setShowMenu}
+                sectionClicked={sectionClicked}
+                setSectionClicked={setSectionClicked}
+                height={windowDimensions.height}
+                width={windowDimensions.width}
+              />
+            </Route>
+            <Route path="/admin/edit/wedding-party">
+              <EditWeddingParty
+                showMenu={showMenu}
+                setShowMenu={setShowMenu}
+                sectionClicked={sectionClicked}
+                setSectionClicked={setSectionClicked}
+                height={windowDimensions.height}
+                width={windowDimensions.width}
+              />
             </Route>
             {/* <Route exact path="/gallery-player">
             <MusicPlayerGallery

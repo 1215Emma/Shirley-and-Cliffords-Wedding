@@ -27,7 +27,7 @@
   }
 
 .form-editable-button {
-  position: absolute;
+  position: relative;
   right: 0;
   color: white;
   border-style: none;

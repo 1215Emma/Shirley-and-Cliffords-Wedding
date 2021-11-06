@@ -21,7 +21,6 @@ const Faq = ({ showSidebar, setShowSidebar, height, width }) => {
               {question[1].answer}
             </h2>
           </div>
-          <div className="question-seperation" />
         </div>
       );
     });
@@ -37,16 +36,9 @@ const Faq = ({ showSidebar, setShowSidebar, height, width }) => {
         style={{ height: `auto`, width: `${width}px` }}
       >
         <div className="inner inner-wrapper-faq">
-          <div className="header-banner-container">
-            {/* <img
-            src={HeaderBannerBg}
-            alt="header banner"
-            className="header-banner-bg"
-          /> */}
             <div className="primary-header faq-primary">
               <h1>{data.header.header_primary}</h1>
             </div>
-          </div>
           <motion.div
             className="section-container"
             initial={{ x: 0, opacity: 0 }}
