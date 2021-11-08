@@ -24,4 +24,4 @@
 
 ### Homepage 
 
-![homepage](https://i.imgur.com/mdhieOA.gif)
++<img align="left alt="homepage" width="200px" src="https://i.imgur.com/mdhieOA.gif">
