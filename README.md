@@ -69,7 +69,7 @@ This was using the images as a full background in each section and having the ho
 The trouble I had with this was that readability with the content was very difficult 
 <br />
 ![iteration 1](https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/iteration_1.png)
-<br /  >
+<br />
 I also incorporated a music player as well to be used as a gallery since music is a big part of their lives. 
 <br />
 This player was able to drag and swipe to the next image, show the progress of the image gallery, and have functionality with the controls. 
@@ -94,4 +94,4 @@ This is where I tried the approach of getting rid of the gallery and music playe
 <br />
 I had a button to change the image but I strugged a lot with mobile sizing due to learning that mobile browsers count 100vh as the space behind the toolbar as well so the content would be cut off. I had to learn how to size every component using inner.width and make everything responsive in case the user changes the width of their browser. 
 <br />
-![iteration 3](https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/iteration_3.png)
+![iteration 3](https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/iteration_3.jpg)
