@@ -18,8 +18,8 @@
 <img align="left" alt="Node.js" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" />
 <img align="left" alt="Express" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png" />
 <img align="left" alt="Firebase" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png" />
-<img align="left" alt="framer-Motion" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/framer-motion/framer-motion.jpg" />
-<img align="left" alt="Formik" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/formik/formik.png" />
+<img align="left" alt="framer-Motion" width="26px" src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/framer-motion.jpg />
+<img align="left" alt="Formik" width="26px" src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/formik.png" />
 <br />
 <br />
 
@@ -66,7 +66,7 @@ This project went through 4 iterations with UI/UX and I had trouble deciding wha
 ### First Iteration 
 This was using the images as a full background in each section and having the homepage be scrollable with snapping. 
 <br />
-The trouble I had with this was that readability with the content was very difficult 
+The trouble I had with this was that readability with the content was very difficult due to images being all different colors. 
 <br />
 ![iteration 1](https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/iteration_1.png)
 <br />
