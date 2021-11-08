@@ -31,7 +31,8 @@
 ### Admin Panel
 - responsive navigation bar 
 - admin panel with editable dynamic content 
-
+ 
+<br />
 <img align="left" alt="homepage" width="300px" src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/admin-panel.gif">
 
 <br />
@@ -41,4 +42,5 @@
 - Gallery image changes every 10 seconds 
 - scrollable vertical gallery navigation 
 
+<br />
 <img align="left" alt="homepage" width="300px" src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/gallery.gif">
