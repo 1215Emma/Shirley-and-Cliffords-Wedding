@@ -24,17 +24,17 @@
 
 ## Features 
 
-- Homepage 
+### Homepage 
 <img align="left" alt="homepage" width="auto"  src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/homepage-view.gif">
 
 
-- Admin Panel
+### Admin Panel
 - responsive navigation bar 
 - admin panel with editable dynamic content 
 <img align="left" alt="homepage" width="auto"  src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/admin-panel.gif">
 
 
-- Gallery
+### Gallery
 - Gallery image changes every 10 seconds 
 - scrollable vertical gallery navigation 
 <img align="left" alt="homepage" width="auto" src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/gallery.gif">
