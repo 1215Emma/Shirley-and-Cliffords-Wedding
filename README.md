@@ -18,8 +18,8 @@
 <img align="left" alt="Node.js" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" />
 <img align="left" alt="Express" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png" />
 <img align="left" alt="Firebase" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png" />
-<img align="left" alt="framer-Motion" width="26px" src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/framer-motion.jpg />
-<img align="left" alt="Formik" width="26px" src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/formik.png" />
+<img align="left" alt="framer-Motion" width="26px" src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/framer-motion.jpg" />
+<img align="left" alt="Formik" width="26px" src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/formik.png"/>
 <br />
 <br />
 
