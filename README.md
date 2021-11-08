@@ -24,4 +24,4 @@
 
 ### Homepage 
 
-<img align="left" alt="homepage" width="200px" src="https://imgur.com/a/Rnbk8bO">
+<img align="left" alt="homepage" width="200px" src="https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/homepage-view.gif">
