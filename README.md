@@ -25,16 +25,19 @@
 ## Features 
 
 ### Homepage 
+- Contains Dynamic content with smooth scrolling via navigation
 ![Homepage](https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/homepage-view.gif)
 
+<br />
 
 ### Admin Panel
-- responsive navigation bar 
-- admin panel with editable dynamic content 
+- Responsive navigation bar 
+- Admin panel with editable dynamic content 
 ![Admin Panel](https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/admin-panel.gif)
 
+<br />
 
 ### Gallery
 - Gallery image changes every 10 seconds 
 - scrollable vertical gallery navigation 
-![Gallery](https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/gallery.gif")
+![Gallery](https://phanes.feralhosting.com/hkscfreak/Shirley-and-Clifford-Wedding/gallery.gif)
