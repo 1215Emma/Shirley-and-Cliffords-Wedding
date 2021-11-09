@@ -17,7 +17,51 @@
   overflow-x: hidden;
    
 }
+.dark-container-wrapper {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+@media only screen and (min-width: 1000px) {
+  .dark-container-wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .dark-container-wrapper {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .dark-container-wrapper {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .dark-container-wrapper {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .dark-container-wrapper {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .header-banner-bg {
   width: 100%;
   opacity: 0;

@@ -33,7 +33,7 @@ const Faq = ({ showSidebar, width }) => {
         variants={showSidebar ? homeVariants : homeCloseVariants}
         initial={showSidebar ? "show" : "pushed"}
         animate={showSidebar ? "push" : "closed"}
-        style={{ height: `auto`, width: `${width}px` }}
+        // style={{ height: `auto`, width: `${width}px` }}
       >
         <div className="inner inner-wrapper-faq">
             <div className="primary-header faq-primary">

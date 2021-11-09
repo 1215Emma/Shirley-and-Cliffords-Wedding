@@ -52,7 +52,7 @@ const Travel = ({ showSidebar, width }) => {
         id="travel"
         className="wrapper travel-wrapper"
         variants={showSidebar ? homeVariants : homeCloseVariants}
-        style={{ height: "auto", width: `${width}px` }}
+        
         >
         
         

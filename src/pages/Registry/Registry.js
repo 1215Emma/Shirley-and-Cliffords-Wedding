@@ -16,7 +16,7 @@ const Registry = ({ showSidebar, setShowSidebar, height, width }) => {
         variants={showSidebar ? homeVariants : homeCloseVariants}
         initial={showSidebar ? "show" : "pushed"}
         animate={showSidebar ? "push" : "closed"}
-        style={{ height: `auto`, width: `${width}px` }}
+        // style={{ height: `auto`, width: `${width}px` }}
       >
         <div className="inner inner-wrapper-registry">
           <div className="header-banner-container">

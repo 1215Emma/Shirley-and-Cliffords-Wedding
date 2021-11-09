@@ -18,37 +18,41 @@ const Home = ({ showSidebar, setShowSidebar, height, width }) => {
       <motion.div
         // id="home"
         className="home-wrapper"
-        style={{ height: `${height}px`, width: `${width}px`, top: 0}}
+        style={{ height: `${height}px`, width: `${width}px`, top: 0 }}
         variants={showSidebar ? homeVariants : homeCloseVariants}
         initial={showSidebar ? "show" : "pushed"}
         animate={showSidebar ? "push" : "closed"}
       >
         <Gallery height={height} width={width} />
         <WeddingParty />
-        <Travel
-          showSidebar={showSidebar}
-          setShowSidebar={setShowSidebar}
-          height={height}
-          width={width}
-        /> 
-        <Faq
-          showSidebar={showSidebar}
-          setShowSidebar={setShowSidebar}
-          height={height}
-          width={width}
-        />
-        <Rsvp
-          showSidebar={showSidebar}
-          setShowSidebar={setShowSidebar}
-          height={height}
-          width={width}
-        />
-        <Registry
-          showSidebar={showSidebar}
-          setShowSidebar={setShowSidebar}
-          height={height}
-          width={width}
-        />
+        <div
+          className="dark-container-wrapper"
+        >
+          <Travel
+            showSidebar={showSidebar}
+            setShowSidebar={setShowSidebar}
+            height={height}
+            width={width}
+          />
+          <Faq
+            showSidebar={showSidebar}
+            setShowSidebar={setShowSidebar}
+            height={height}
+            width={width}
+          />
+          <Rsvp
+            showSidebar={showSidebar}
+            setShowSidebar={setShowSidebar}
+            height={height}
+            width={width}
+          />
+          <Registry
+            showSidebar={showSidebar}
+            setShowSidebar={setShowSidebar}
+            height={height}
+            width={width}
+          />
+        </div>
       </motion.div>
     );
   }
