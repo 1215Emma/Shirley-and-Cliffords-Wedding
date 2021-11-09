@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./EditTravel.css";
-
 import { useFirebaseData } from "../useFirebaseData";
 import { AnimatePresence, motion } from "framer-motion";
-import FlowerBorder from "../images/flower-border-vertical.png";
 import AdminSidebar from "../../Admin/Sidebar/AdminSidebar";
 import { updateFirebaseData } from "../../pages/useFirebaseData";
 import { Formik, Form, Field, ErrorMessage, FastField } from "formik";

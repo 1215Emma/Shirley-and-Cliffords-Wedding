@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./EditRegistry.css";
 import { useFirebaseData } from "../useFirebaseData";
 import { motion, AnimatePresence } from "framer-motion";
-import { homeVariants, homeCloseVariants } from "../Variants/PageVariants";
 import AdminSidebar from "../../Admin/Sidebar/AdminSidebar";
 import { updateFirebaseData } from "../../pages/useFirebaseData";
 import { Formik, Form, Field, ErrorMessage, FastField } from "formik";

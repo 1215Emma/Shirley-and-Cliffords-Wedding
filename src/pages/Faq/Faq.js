@@ -4,7 +4,7 @@ import { useFirebaseData } from "../useFirebaseData";
 import { motion } from "framer-motion";
 import { homeVariants, homeCloseVariants } from "../Variants/PageVariants";
 
-const Faq = ({ showSidebar, setShowSidebar, height, width }) => {
+const Faq = ({ showSidebar, width }) => {
   const page = "faq";
   const data = useFirebaseData(page);
   const questions = () => {

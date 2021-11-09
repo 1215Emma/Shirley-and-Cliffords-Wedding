@@ -3,9 +3,8 @@ import "./Travel.css";
 import { useFirebaseData } from "../useFirebaseData";
 import { motion } from "framer-motion";
 import { homeVariants, homeCloseVariants } from "../Variants/PageVariants";
-import FlowerBorder from "../images/flower-border-vertical.png";
 
-const Travel = ({ showSidebar, setShowSidebar, height, width }) => {
+const Travel = ({ showSidebar, width }) => {
   const page = "travel";
   const data = useFirebaseData(page);
   const resorts = () => {
@@ -53,8 +52,6 @@ const Travel = ({ showSidebar, setShowSidebar, height, width }) => {
         id="travel"
         className="wrapper travel-wrapper"
         variants={showSidebar ? homeVariants : homeCloseVariants}
-        // initial={showSidebar ? "show" : "pushed"}
-        // animate={showSidebar ? "push" : "closed"}
         style={{ height: "auto", width: `${width}px` }}
         >
         
@@ -76,11 +73,6 @@ const Travel = ({ showSidebar, setShowSidebar, height, width }) => {
             alt="wagyu under a palm tree relaxing"
             className="palm-tree-cow"
           />
-          {/* <img
-          src={HawaiiBorder}
-          alt="hawaiian themed border"
-          className="hawaii-border"
-        /> */}
         </div>
       </motion.div>
     );
@@ -88,7 +80,6 @@ const Travel = ({ showSidebar, setShowSidebar, height, width }) => {
   if (data !== undefined) {
     return (
       <>
-        {/* <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} /> */}
         {travelRender()}
       </>
     );

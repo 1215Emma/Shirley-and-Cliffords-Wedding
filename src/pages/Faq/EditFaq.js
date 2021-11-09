@@ -161,12 +161,6 @@ const EditFaq = ({
             initial={{ x: 0, opacity: 0 }}
             animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
           >
-            {/* <div className="primary-body faq-body">
-              <h1>{data.body.body_primary}</h1>
-              <h2>{data.body.body_secondary}</h2>
-              <h1>{data.body.body_tertiary}</h1>
-              <h2>{data.body.body_four}</h2>
-            </div> */}
             {questions()}
           </motion.div>
           <img

@@ -1,12 +1,8 @@
 import React from "react";
 import "./EditWeddingParty.css";
 import { useFirebaseData } from "../useFirebaseData";
-import { motion, AnimatePresence } from "framer-motion";
 import AdminSidebar from "../../Admin/Sidebar/AdminSidebar";
-import { updateFirebaseData } from "../../pages/useFirebaseData";
-import { Formik, Form, Field, ErrorMessage, FastField } from "formik";
-import { BsChevronCompactDown } from "react-icons/bs";
-import { GrFormCheckmark } from "react-icons/gr";
+
 const EditWeddingParty = ({
   showMenu,
   setShowMenu,

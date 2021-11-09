@@ -1,12 +1,3 @@
-/* 
-.sticky {
-  position: fixed;
-  width: 20vw;
-  height: 100%;
-  margin-top: auto;
-  margin-bottom: auto;
-} */
-
 .home-wrapper {
   visibility: visible;
   position: relative;
@@ -16,8 +7,6 @@
   max-height: 100%;
   margin-bottom: 0;
   display: block;
-  /* scroll-snap-type: y mandatory;
-  scroll-behavior: smooth; */
 }
 .wrapper {
   display: flex;
@@ -28,20 +17,7 @@
   overflow-x: hidden;
    
 }
- /* @media screen and (min-width: 550px) {
-   .inner {
-     width: 75vw;
-   }
-  .flower-border-left {
-  position: absolute;
-  left: 12.5vw;
-  margin-top: -1.5rem;
-  height: 20%;
-  z-index: 1;
-  transform: rotate(45deg);
-  overflow: hidden;
-}
- } */
+
 .header-banner-bg {
   width: 100%;
   opacity: 0;
@@ -73,23 +49,10 @@
 .left-body {
   font-size: 16px;
 }
-/* .section-container img {
-  top: 0;
-  left: 0;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  object-fit: contain;
-  border: white solid 1px;
-} */
 
 .primary-header {
   position: relative;
   z-index: 2;
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   width: 100%;
   height: auto;
   margin-bottom: 0;

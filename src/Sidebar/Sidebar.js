@@ -1,7 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
 import { motion, AnimatePresence } from "framer-motion";
-
 import { HashLink as Link } from "react-router-hash-link";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -30,29 +29,6 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
     },
   };
 
-  const hamburgerVariants = {
-    horizontal: {
-      x: 0,
-      opacity: 1,
-    },
-    vertical: {
-      x: 0,
-
-      opacity: 1,
-  
-      transition: {
-        duration: 0.5,
-      },
-    },
-    exit: {
-      x: 0,
-
-      opacity: 1,
-      transition: {
-        duration: 1,
-      },
-    },
-  };
   const blackBoxVariants = {
     hide: {
       y: "-100%",
@@ -79,18 +55,6 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
         <AnimatePresence initial={false} exitBeforeEnter>
           {showSidebar && (
             <>
-              {/* <motion.div
-                className="hamburger"
-                variants={hamburgerVariants}
-                initial="horizontal"
-                animate="vertical"
-                exit="exit"
-              >
-                <GiHamburgerMenu
-                  className="hamburger-icon"
-                  onClick={() => setShowSidebar(!showSidebar)}
-                />
-              </motion.div> */}
               <motion.div
                 className="black-box"
                 variants={blackBoxVariants}
@@ -104,10 +68,6 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
         </AnimatePresence>
         <motion.div
           className="hamburger"
-          // variants={hamburgerVariants}
-          // initial="horizontal"
-          // animate="vertical"
-          // exit="exit"
         >
           <GiHamburgerMenu
             className="hamburger-icon"
@@ -115,7 +75,6 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
             style={{ color: showSidebar ? "white" : "black" }}
           />
         </motion.div>
-        {/* <HiDotsHorizontal /> */}
       </div>
       <AnimatePresence initial={false} exitBeforeEnter>
         {showSidebar && (
@@ -125,19 +84,8 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            // style={{
-            //   backgroundColor: showSidebar
-            //     ? "rgba(0, 0, 0, 0.5)"
-            //     : "rgba(0, 0, 0, 0)",
-            // }}
           >
             <div className="sidebar-container">
-              {/* <button
-                className="hamburger-vertical"
-                onClick={() => {
-                  setShowSidebar(!showSidebar);
-                }}
-              ></button> */}
               <div className="sidebar-links">
                 <Link
                   smooth
@@ -205,16 +153,6 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
                 >
                   Registry
                 </Link>
-                {/* <Link
-                  to="/gallery-player"
-                  activeStyle={{ fontWeight: "bold" }}
-                  className="sidebar-buttons"
-                  onClick={() => {
-                    setShowSidebar(!showSidebar);
-                  }}
-                  >
-                  Gallery Player
-                </Link> */}
                 <Link
                   smooth
                   className="sidebar-buttons"

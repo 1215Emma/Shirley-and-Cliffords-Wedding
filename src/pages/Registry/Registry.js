@@ -55,7 +55,6 @@ const Registry = ({ showSidebar, setShowSidebar, height, width }) => {
     const numOfStores = Object.values(data.body)
     return (
       <>
-        {/* <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} /> */}
         {registryRender(numOfStores)}
       </>
     );

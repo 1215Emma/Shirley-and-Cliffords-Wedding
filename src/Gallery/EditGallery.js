@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import "./EditGallery.css";
 import { motion, AnimatePresence } from "framer-motion";
 import imageUrls from "../images/imageUrls.json";
-// import { BsChevronCompactRight, BsChevronCompactLeft } from "react-icons/bs";
 import { useFirebaseData } from "../pages/useFirebaseData";
 import AdminSidebar from "../Admin/Sidebar/AdminSidebar";
 import { BsChevronCompactDown } from "react-icons/bs";
@@ -34,9 +33,7 @@ const EditGallery = ({
 }) => {
   const [primaryImage, setPrimaryImage] = useState("15");
   const [isEditing, setIsEditing] = useState([false, ""]);
-  // const [allImages, setAllImages] = useState(
-  //   Object.keys(imageUrls).filter((primary) => primary !== primaryImage)
-  // );
+
   const [allImages, setAllImages] = useState(
     Object.keys(imageUrls).filter((primary) => primary !== primaryImage)
   );
@@ -162,9 +159,6 @@ const EditGallery = ({
       <motion.div
         className="wrapper edit-gallery-wrapper"
         style={{ height: "auto", width: `${width}px` }}
-        // initial={{ opacity: 0, y: 0 }}
-        // animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-        // exit={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
       >
         <AdminSidebar
           showMenu={showMenu}
@@ -227,7 +221,6 @@ const EditGallery = ({
             </div>
           </div>
         </div>
-        {/* <AnimateSharedLayout type="crossfade"> */}
         <div className="edit-primary-container">
           <div className="hero-image" style={{ height: `${height / 2}px` }}>
             <AnimatePresence initial={false} exitBeforeEnter>

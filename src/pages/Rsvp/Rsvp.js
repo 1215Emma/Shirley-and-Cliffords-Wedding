@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Loader from "../../Utilities/Loader";
 import { homeVariants, homeCloseVariants } from "../Variants/PageVariants";
 
-const Rsvp = ({ showSidebar, setShowSidebar, height, width }) => {
+const Rsvp = ({ showSidebar,  width }) => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const page = "rsvp"
   const data = useFirebaseData(page);
