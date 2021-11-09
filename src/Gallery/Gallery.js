@@ -80,8 +80,8 @@ const Gallery = ({ height, width }) => {
           </div>
         </div>
         {/* <AnimateSharedLayout type="crossfade"> */}
-        <div className="primary-container">
-          <div className="hero-image" style={{ width: `${width/1.5}px`}}>
+        <div className="primary-container" >
+          <div className="hero-image" style={{ height: `${height / 2}px`}}>
             <AnimatePresence initial={false} exitBeforeEnter>
               <motion.img
                 key={primaryImage}

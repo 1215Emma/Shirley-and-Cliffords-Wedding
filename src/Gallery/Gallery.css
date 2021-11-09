@@ -57,7 +57,7 @@
   display: flex;
   justify-content: center;
   z-index: 3;
-  height: 100%;
+  
   width: 90%;
   overflow: hidden;
   margin-left: auto;
@@ -65,10 +65,11 @@
 }
 
 .hero-image {
-  height: auto;
+  width: auto;
   margin-right: 0.5em;
   border: white solid 3px;
 }
+
 .primary-product-image {
   overflow: hidden;
   position: relative;
