@@ -8,17 +8,34 @@
   width: 25%;
   height: auto;
   z-index: 3;
-  /* background-color: rgba(0, 0, 0, 0.5); */
 }
-/* .sidebar-button-container {
+
+@media only screen and (min-width: 1000px) {
+  .button-and-wrapper {
   position: fixed;
-  display: block;
-  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  height: 4rem;
   top: 0;
   left: 0;
-  height: 100%;
-  width: auto;
-} */
+  width: 15%;
+  height: auto;
+  z-index: 3;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .button-and-wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 4rem;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: auto;
+  z-index: 3;
+  }
+}
 .sidebar-button-container {
   top: 0;
   left: 0;
@@ -46,7 +63,6 @@
 }
 .hamburger-icon {
   font-size: 47px;
-  /* color: black; */
   margin-top: 1.5rem;
 }
 .sidebar-wrapper {

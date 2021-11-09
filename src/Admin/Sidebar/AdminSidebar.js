@@ -164,7 +164,7 @@ const AdminSidebar = ({
   };
 
   return (
-    <div className="button-and-wrapper">
+    <div className="button-and-wrapper-admin">
       <div className="sidebar-button-container">
         <AnimatePresence initial={false} exitBeforeEnter>
           {showMenu && (

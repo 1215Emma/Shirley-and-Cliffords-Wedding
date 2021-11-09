@@ -1,4 +1,4 @@
-.button-and-wrapper {
+.button-and-wrapper-admin {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -8,17 +8,8 @@
   width: 25%;
   height: auto;
   z-index: 8;
-  /* background-color: rgba(0, 0, 0, 0.5); */
 }
-/* .sidebar-button-container {
-  position: fixed;
-  display: block;
-  z-index: 4;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: auto;
-} */
+
 .sidebar-button-container {
   top: 0;
   left: 0;
